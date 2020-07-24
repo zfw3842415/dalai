@@ -1,0 +1,41 @@
+<!--pages/shop/shop.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+  <view class="screen">
+    <!-- 筛选 -->
+    <view class="tabTit box">
+      <view class="flex1{{!tab[index]?' active':''}}" wx:for="{{tabTxt}}" wx:key="type" data-index="{{index}}" bindtap="filterTab">
+        <text>{{item}}</text>
+        <image src="../images/ico/arrow.png"></image>
+      </view>
+    </view>
+    <!--筛选项-->
+    <view class="tabLayer" hidden="{{tab[0]}}">
+      <text class="{{pinpai_id==0?'active':''}}" data-id="0" data-index="0" data-txt="全部" bindtap="filter">商家分类</text>
+      <text class="{{pinpai_id==item.id?'active':''}}" wx:for="{{listClass}}" wx:key="pp" wx:for-item="item" data-id="{{item.id}}" data-index="0" data-txt="{{item.title}}" bindtap="filter">{{item.title}}</text>
+    </view>
+  </view>
+
+
+  <view class="shopContent">
+    <view class="ul">
+      <block wx:for="{{pinpaiList}}" wx:for-index="index" wx:key="item.id">
+        <view class="li">
+          <view bindtap="shopview" data-id="{{item.nid}}">
+            <image src="{{imagesUrl}}//{{item.storeImage}}"></image>
+            <view class="p">{{item.storeName}}</view>
+            <!-- <view class="p">商家折扣：{{item.storePercent*100}}折</view> -->
+          </view>
+        </view>
+        
+      </block>
+    </view>
+  </view>
+
+
+
+
+
+
+
+</view>

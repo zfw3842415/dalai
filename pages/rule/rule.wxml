@@ -1,0 +1,86 @@
+<!--pages/rule/rule.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+    <view class="ruleContent">
+        <view class="h1">大来文化藏家投资条例</view>
+        <image class="logo" mode="aspectFill" src="../images/logo/logo.jpg"></image>
+        <view class="h3">前言：</view>
+        <view class="p">为提供给公司藏家一个可以对自己艺术品随时投资交易的平台，我公司制定如下藏家条例。</view>
+        <view class="bor">
+            <view class="h3">藏家级别</view>
+            <view class="p">（一）入门藏家：一次购买中心艺术品一万元以上。</view>
+            <view class="p">（二）潜力藏家：累计购买公司艺术品3万元以上。</view>
+            <view class="p">（三）资深藏家：累计购买公司艺术品5万以上。</view>
+            <view class="p">（四）联创藏家：加入公司联创计划。</view>
+            <view class="p">注：所有藏家均可无条件享受中心举办各类艺术活动。</view>
+        </view>
+       <view class="bor">
+            <view class="h3">藏家权益</view>
+            <view class="p">（一）退购权：</view>
+            <view class="p">藏家购买本公司成交价1万元以上艺术品，一个月内，可享受退购。公司收取8%的佣金。</view>
+            <view class="p">1、退回此笔交易的票据。</view>
+            <view class="p">2、所购艺术品未有任何形式损坏。</view>
+            <view class="p">3、如退购期超过1个月，公司只接受半价退购。</view>
+            <view class="p">（二）置换权：</view>
+            <view class="p">藏家购买本公司成交价5万元以上艺术品，可享受8折置换。</view>
+            <view class="p">1、所购艺术品未有任何形式损坏。</view>
+            <view class="p">2、退回还作品交易发票。</view>
+            <view class="p">（三）寄卖权：</view>
+            <view class="p">藏家购买本公司成交价5万元以上艺术品，可委托公司代为销售。成交后公司收取15%的佣金。</view>
+            <view class="p">（四）按揭权：</view>
+            <view class="p">五万元以上艺术品，藏家可以以按揭形式购买。</view>
+            <view class="p">1、首付该幅作品市场定价30%的押金。</view>
+            <view class="p">2、按年一次性支付所购作品市场价格10%的按揭款。</view>
+            <view class="p">3、当支付按揭款超过该作品市场售价的10%，此作品即归藏家所有。</view>
+            <view class="p">4、逾期一个月未缴纳按揭款，公司有权无条件收回该作品，退回藏家押金。</view>
+            <view class="p">5、租赁期间不享受条例中第一~第三项权利。</view>
+            <view class="p">（五）优选权：</view>
+            <view class="p">一件作品，同等条件下将按会员级别享受优先选购。</view>
+            <view class="p">（六）优惠权</view>
+            <view class="p">1、藏家会员按级别享受以下优惠：</view>
+            <view class="p">（1）入门藏家享受9.8折优惠；</view>
+            <view class="p">（2）潜力藏家享受9.5折优惠；</view>
+            <view class="p">（3）资深藏家享受9.2折优惠；</view>
+            <view class="p">（4）联创藏家享受9折优惠。</view>
+            <view class="p">2、藏家会员在购买作品中如优惠低于以上折扣，此作品将不再享受条例中第一至第三条权利。</view>
+            <view class="p">注：以上条款以最终藏家合同为准，定制作品不享受以上条例。</view>
+        </view>
+        <view class="imgcon">
+            <image mode="aspectFill" src="../images/other/1.jpg"></image>
+        </view>
+        <view class="bor">
+            <view class="h3">联合创始人招募</view>
+            <view class="con">
+                <view class="p">艺术品投资不仅是一种收藏，更是一种理财，不仅满足审美的需要更提供个人财富的保值增值。大来艺术中心特招募联合创始人，共同发展，推动贵州艺术品市场的繁荣。</view>
+            </view>
+            <view class="con">
+                <view class="p">1、联创藏家产生方法：</view>
+                <view class="p">（1）任意以八折价格投资艺术馆一幅或多幅作品。</view>
+            </view>
+            <view class="con">
+                <view class="p">2、运营办法：</view>
+                <view class="p">（1）联创人将投资作品从新定价后，委托艺术中心进行市场销售运作。</view>
+                <view class="p">（2）所有作品未在合作周期内实现交易，中心将无条件退回联创人投资。联创人不承担此过程中任何损失。</view>
+            </view>
+            <view class="con">
+                <view class="p">3、合作周期：自认购日起一年。</view>
+            </view>
+            <view class="con">
+                <view class="p">4、投资收益：</view>
+                <view class="p">作品成交后，投资增值部分联创人与中心进行5/5分成。</view>
+            </view>
+            <view class="con">
+                <view class="p">5、其他福利</view>
+                <view class="p">（1）自然成为艺术馆对应等级藏家。</view>
+                <view class="p">（2）无条件参加艺术馆各项活动。</view>
+            </view>
+        </view>
+
+        
+    </view>
+</view>
+
+
+
+
+

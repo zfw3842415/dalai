@@ -1,0 +1,30 @@
+/* pages/myteach/myteach.wxss */
+.myteachHead{
+  text-align: center;
+  padding: 1em 0;
+  border-bottom: 1px solid #eee;
+}
+.myteachHead image{
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  box-shadow: 0 0 1em rgba(0,0,0,0.15);
+}
+
+.myteachHead .h3{
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.myteachCon .ul{
+  padding: 0.75em
+}
+.myteachCon .ul .li{
+  padding: 0.5em 0;
+  border-bottom: 1px solid #eee
+}
+.myteachCon .ul .li text{
+  display: inline-block;
+  vertical-align: top;
+}
+

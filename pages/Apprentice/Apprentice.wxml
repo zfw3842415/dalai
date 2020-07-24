@@ -1,0 +1,126 @@
+<!--pages/Apprentice/Apprentice.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+  <view class="in_title">
+    <view class="swiper-tab">
+      <view class="navigator swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
+        艺术家
+      </view>
+      <view class="navigator swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
+        藏家
+      </view>
+      <view class="navigator swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">
+        站内
+        <text class="num" wx:if="{{msgCount>0}}">{{msgCount}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="apprenticeWrap">
+    <!-- 拜师 -->
+    <view class="{{currentTab == 0 ? 'show':'hidden'}}">
+      <view class="screen">
+        <!-- 筛选 -->
+        <!-- <view class="tabTit box">
+          <view class="flex1{{!tab[index]?' active':''}}" wx:for="{{tabTxt}}" wx:key="type" data-index="{{index}}" bindtap="filterTab">
+            <text>{{item}}</text>
+            <image src="../images/ico/arrow.png"></image>
+          </view>
+        </view>
+
+        <view class="tabLayer" hidden="{{tab[0]}}">
+          <text class="{{pinpai_id==0?'active':''}}" data-id="0" data-index="0" data-txt="全部" bindtap="filter">全部</text>
+          <text class="{{pinpai_id==item.id?'active':''}}" wx:for="{{pinpaiList}}" wx:key="pp" wx:for-item="item" data-id="{{item.id}}" data-index="0" data-txt="{{item.title}}" bindtap="filter">{{item.title}}</text>
+        </view> -->
+
+      </view>
+      <scroll-view  class='swiper_con scroll-view-container' bindtouchstart="start_fn" bindtouchend="end_fn" scroll-y="true" lower-threshold='30' upper-threshold='0' enable-back-to-top="true">
+        <block wx:for="{{coachList}}" wx:for-index="idx" wx:key="item.id">
+          <view class='swiper_con content-view'>
+            <view class="swiperCon-title">
+              <navigator url='../TeacherShow/TeacherShow?id={{item.id}}'>
+                <view class="head_pic">
+                  <image src="{{item.avatarUrl}}"></image>
+                </view>
+                <view class="info">
+                  <view class="name">{{item.weixinNickName}}</view>
+                  <view class="other_info">
+                    <!-- <text class="flex-left">球龄：{{item.year}}年</text> -->
+                    <!-- <text class="flex-right">职业：{{item.profession}}</text> -->
+                  </view>
+                </view>
+              </navigator>
+            </view>
+            <view class='imgList'>
+              <view class='imgList-li' wx:for='{{item.imageUrl}}' wx:for-index="index">
+                <image class='img' src='{{imagesUrl}}//{{item}}' data-parent="{{idx}}" data-index="{{index}}" data-src='{{imagesUrl}}//{{item}}' bindtap='previewCoachImg'></image>
+              </view>
+            </view>
+            <!-- <view class="yaoyueCon">
+              <button class="yaoyue"  bindtap="getRelation" data-type="2" data-rid="{{item.id}}" data-index="{{idx}}" data-type="{{item.type}}">拜师</button>
+            </view> -->
+            <view class="swiper_conF">
+              <view class="ico_item {{item.activeFoucs==1? 'active':''}}" data-index="{{idx}}" data-rid="{{item.id}}" bindtap="coachLike">
+                <view class="iconfont icon-z-like "></view>
+                <text>打赏</text>
+              </view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+      <view class="load" wx:if="{{listTotal!=listCount}}">上滑加载更多...</view>
+    </view>
+    <!-- 招徒 -->
+    <view class="{{currentTab == 1 ? 'show':'hidden'}}">
+      <scroll-view class='swiper_con scroll-view-container' bindtouchstart="start_fn" bindtouchend="end_fn" scroll-y="true" lower-threshold='30' upper-threshold='0' enable-back-to-top="true">
+        <block wx:for="{{studentList}}" wx:for-index="idx" wx:key="item.id">
+          <view class='swiper_con content-view'>
+            <view class="swiperCon-title">
+              <navigator url='../studentShow/studentShow?id={{item.id}}'>
+                <view class="head_pic">
+                  <image src="{{item.avatarUrl}}"></image>
+                </view>
+                <view class="info">
+                  <view class="name">{{item.weixinNickName}}</view>
+                  <!-- <view class="other_info">
+                    <text class="flex-left">球龄：{{item.year}}年</text>
+                    <text class="flex-right">职业：{{item.profession}}</text>
+                  </view> -->
+                </view>
+              </navigator>
+            </view>
+            <view class='imgList'>
+              <view class='imgList-li' wx:for='{{item.imageUrl}}' wx:for-index="index">
+                <image class='img' mode="aspectFill" src='{{imagesUrl}}//{{item}}' data-parent="{{idx}}" data-index="{{index}}" data-src='{{imagesUrl}}//{{item}}' bindtap='previewStudentImg'></image>
+              </view>
+            </view>
+            <!-- <view class="yaoyueCon">
+              <button class="yaoyue" bindtap="getRelation" data-type="1"  data-rid="{{item.id}}">招徒</button>
+            </view> -->
+            <view class="swiper_conF">
+              <view class="ico_item {{item.activeFoucs==1? 'active':''}}" data-index="{{idx}}" data-rid="{{item.id}}" data-index="{{idx}}" data-type="{{item.type}}" bindtap="modalcnt">
+                <view class="iconfont icon-z-like "></view>
+                <text>购买</text>
+              </view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+      <view class="load" wx:if="{{listTotal!=listCount}}">上滑加载更多...</view>
+    </view>
+    <!-- 站内消息 -->
+    <view class="{{currentTab == 2 ? 'show':'hidden'}}">
+      <scroll-view class='swiper_con scroll-view-container' bindtouchstart="start_fn" bindtouchend="end_fn" scroll-y="true" lower-threshold='30' upper-threshold='0' enable-back-to-top="true">
+        <view class="Station content-view">
+          <view class="ul">
+          <block wx:for="{{msgInfo}}">
+            <view class="li">
+              <view class="h3">{{item.message}}</view>
+              <view class="p">消息时间：{{item.messageDate}}</view>
+            </view>
+          </block>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

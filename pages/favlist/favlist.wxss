@@ -1,0 +1,23 @@
+/* pages/newslist/newslist.wxss */
+.newslistContent{
+  background: #fff;
+  margin: 0.5em;
+  font-size: 0.85em;
+  line-height: 1.75;
+}
+.newslistContent .ul .li{
+  border-bottom: 1px solid #eee
+}
+.newslistContent .ul .li navigator{
+  padding: 1em;
+  display: flex;align-items: center;
+}
+.newslistContent .ul .li navigator .newslistItem{
+  flex: 3
+}
+.newslistContent .ul .li navigator .newslistItem.show{
+  flex: 1;
+  text-align: right
+}
+
+

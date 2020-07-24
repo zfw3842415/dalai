@@ -1,0 +1,63 @@
+/* pages/personalInfo/personalInfo.wxss */
+.border-bg{
+  width: 35em;
+  height: 35em;
+}
+
+
+.content{
+  margin: 0.5em;
+  background: #fff;
+  box-sizing: border-box;
+}
+.content label{
+  display: block
+}
+.content text{
+  display: inline-block;
+  vertical-align: middle;
+  width: 20%;
+  text-align: center
+}
+.content input,.content picker,.content textarea{
+  padding: 0.75em 0.5em;
+  border-bottom: 1px solid #eee;
+  display: inline-block;
+  width: 75%;
+  vertical-align: middle;
+}
+
+
+.submit{
+  width:95%;
+  text-align: center;
+  background: radial-gradient(rgb(82, 82, 82), rgb(49, 49, 49), rgb(0, 0, 0)); 
+  margin: 2em auto 0;
+  color: #fff;
+  padding: 0.75em 0
+}
+.submit:active{
+  background: #000;
+}
+
+.ball{
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+/* pages/master/master.wxss */
+.masterContent .ul .li image{
+  width: 6em;
+  height: 6em;
+  display: inline-block;
+  border-radius: 50%;
+  vertical-align: middle
+}
+
+.masterContent{
+  background: #fff;
+  margin: 0.5em
+}
+.masterContent .ul .li{
+  box-shadow: 0 0 0.75em rgba(0,0,0,0.1);
+  margin-bottom: 0.75em
+}
+.masterContent .ul .li navigator{
+  padding: 0.35em 
+}
+.masterContent .ul .li .text{
+  display: inline-block;
+  vertical-align: middle;
+  padding:0 0.5em
+}
+.masterContent .ul .li .text .h3{
+  font-size: 1.3em;
+}
+.masterContent .ul .li .text .p{
+  font-size: 0.85em;
+  color: #999
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

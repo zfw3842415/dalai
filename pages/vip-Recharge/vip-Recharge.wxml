@@ -1,0 +1,38 @@
+<!--pages/vip-Recharge/vip-Recharge.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+  <view class="vipContent">
+    <view class="viptitle">
+      <view class="userinfo">
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </view>
+      <view class="Expire">
+        <text>会员VIP到期：</text>
+        <text>{{vipExpireDate}}</text>
+      </view>
+    </view>
+
+    <view class="vipCon">
+      <view class="ul">
+      <block wx:for="{{money}}" wx:for-index="index">
+        <view class="li {{item.state==1?'active':''}}" bindtap="select_use" data-index="{{item.id}}" data-key='{{index}}'>
+            <text class="tit">{{item.vipName}}</text>
+            <view class="money">
+              <text class="span">￥</text>
+              <text class="moneytext">{{item.vipPrice}}</text>
+            </view>
+          </view>
+      </block>
+      </view>
+
+
+    </view>
+
+
+    <view class="btn" bindtap="purchapurchaseVip">
+      <text>立即充值</text>
+    </view>
+
+  </view>
+</view>

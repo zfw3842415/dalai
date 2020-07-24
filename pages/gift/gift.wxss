@@ -1,0 +1,75 @@
+/* pages/gift/gift.wxss */
+
+.giftCon{
+  background: #fff;
+  margin: 0.5em
+}
+.giftCon .ul{
+  border-bottom: 1px solid #eee;
+  background: #f5f5f5;
+}
+.giftCon .ul .li{
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+  padding: 0.75em 0;
+}
+.giftCon .ul .li image{
+  width: 4.5em;
+  height: 4.5em;
+  margin-bottom: 0.35em
+}
+.giftCon .ul .li text{
+  display: block;
+  font-size: 0.85em;
+  color: rgba(0,0,0,0.5)
+}
+
+/* 排行榜 */
+.Ranking {
+  padding: 1em 0
+}
+.Ranking .ul{
+  background: none;
+  border-bottom: 0;
+}
+.Ranking .ul .li{
+  width: 100%;
+  text-align: left;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #eee
+}
+.Ranking .ul .li text{
+  display: inline-block;
+  vertical-align: middle
+}
+.Ranking .ul .li text.num{
+  width: 2em;
+  height: 2em;
+  background: rgb(190, 190, 190);
+  color: #fff;
+  border-radius: 0.2em;
+  text-align: center;
+  line-height: 2em;
+}
+.Ranking .ul .li text.text{
+  width: 60%;
+  padding: 0 0.75em
+}
+.Ranking .ul .li text.gift-num{
+  text-align: right;
+  width: 25%
+}
+
+.Ranking .ul .li text.first{
+  background: #4a7cd3;
+}
+.Ranking .ul .li text.second{
+  background: #51ba91
+}
+.Ranking .ul .li text.Third{
+  background: #8f77e5
+}
+
+
+

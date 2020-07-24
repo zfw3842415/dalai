@@ -1,0 +1,21 @@
+<!--pages/shop/shop.wxml-->
+<view class="border-bg"></view>
+
+<view class="content">
+  <view class="shopshowContent">
+    <view class="pic">
+      <image src="{{imagesUrl}}//{{shopDetail.storeImage}}"></image>
+    </view>
+    <view class="shopShowTitle">
+      <view class="h3">{{shopDetail.storeName}}</view>
+      <view class="p">{{shopDetail.storeInfo}}</view>
+    </view>
+    <view class="shopShowCon">
+      <view class="p">单位地址：{{shopDetail.storePos}}</view>
+      <view class="p">单位电话：{{shopDetail.storePhone}}</view>
+      <!-- <view class="p">享受折扣：{{shopDetail.storePercent*100}}折</view> -->
+    </view>
+
+    <view class="return" bindtap="returnto">返回</view>
+  </view>
+</view>

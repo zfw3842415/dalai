@@ -1,0 +1,60 @@
+/* pages/money/money.wxss */
+.balance{
+  background: rgba(255,255,255,0.15);
+  margin: 0.5em;
+  text-align: center;
+  color: #fff;
+  padding: 3em 0
+}
+.balance text{
+  font-size: 0.85em;
+  font-weight: 300;
+}
+.balance .money{
+  font-size: 3em;
+  font-weight: bold;
+}
+.Amount{
+  background: #fff;
+  margin: 0.5em;
+  padding: 0.75em;
+}
+.Amount .title{
+  border-bottom:1px solid #eee;
+  position: relative;
+}
+.Amount .title text{
+  font-size: 2em;
+  position: absolute;
+  font-weight: bold;
+  top: 50%;
+  transform: translate(0,-50%)
+}
+
+.Amount input{
+  height: 2em;
+  line-height: 2em;
+  font-size: 2em;
+  padding-left: 1.5em;
+  font-weight: bold
+}
+.btn{
+  display: flex;
+  align-items: center; 
+}
+.btn .moneyBtn{
+  flex: 1;
+  text-align: center;
+  padding: 1em 0
+}
+
+.cz-btn{
+  margin: 1em 0;
+  padding: 1em 0;
+  background: rgb(131, 245, 156)
+}
+
+
+
+
+

@@ -1,0 +1,20 @@
+<!--pages/activityPhotos/activityPhotos.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+<block wx:for="{{momentInfo}}" wx:for-index="idx"> 
+  <view class="hisactivity">
+      <view class="hisactivityCon">
+          <view class="p">{{item.content}}</view>
+          <view class="img">
+              <view class='imgList-li' wx:for='{{item.imageUrl}}' wx:for-index="index">
+                <image class='img' mode='aspectFill' src='{{imagesUrl}}//{{item}}' data-parent="{{idx}}" data-index="{{index}}" bindtap='previewImg'></image>
+              </view>
+          </view>
+          <view class="p time">
+              <text class="text">时间：{{item.date}}</text>
+              
+          </view>
+      </view>
+  </view>
+  </block>
+</view>

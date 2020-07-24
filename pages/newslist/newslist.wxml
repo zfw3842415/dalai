@@ -1,0 +1,21 @@
+<!--pages/newslist/newslist.wxml-->
+<view></view>
+<view class="content">
+  <view class="newslistContent">
+    <view class="ul">
+      <block wx:for="{{rellist}}">
+        <view class="li">
+          <navigator url="../newshow/newshow?id={{item.relativeId}}">
+            <view class="newslistItem">
+              <view class="p">{{item.message}}</view>
+              <view class="span">{{item.messageDate}}</view>
+            </view>
+            <view class="newslist Item show">详情</view>
+          </navigator>
+        </view>
+      </block>
+
+    </view>
+  </view>
+
+</view>

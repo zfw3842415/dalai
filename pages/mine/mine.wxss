@@ -1,0 +1,141 @@
+/* pages/mine/mine.wxss */
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+
+.vip {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.userinfo button {
+  background: none;
+  color: #fff;
+}
+.userinfo .vip{
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  top: 0;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.content {
+  position: relative;
+}
+
+.userbtn {
+  display: flex;
+  color: #fff;
+  margin-top: 2em;
+}
+
+.userbtn image {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.userbtn text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.userbtnCon {
+  background: rgba(0, 0, 0, 0.8);
+  margin: 0.35em;
+}
+
+.userbtn navigator {
+  flex: 1;
+  text-align: center;
+  padding: 0.75em 0;
+}
+
+.userbtn navigator.yaoqing {
+  background: #00a4d6;
+}
+
+.user-info {
+  display: flex;
+}
+
+.user-info .u-infoItem {
+  flex: 1;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 1.3em 0;
+}
+
+.user-info .u-infoItem:last-child {
+  border: 0;
+}
+
+.user-info .u-infoItem text {
+  display: block;
+}
+
+.userbtn .usernew text {
+  position: relative;
+}
+
+.userbtn .usernew text text {
+  position: absolute;
+  width: 1.2em;
+  height: 1.2em;
+  background: #f00;
+  text-align: center;
+  line-height: 1.2em;
+  border-radius: 50%;
+  font-size: 0.85em;
+  top: -0.25em;
+}
+
+.u-infoItem image {
+  width: 2em;
+  height: 2em;
+  opacity: 0.6;
+}
+
+.mineContent {
+  background: #fff;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.15);
+  margin: 0.35;
+}
+
+.mineContent .ul .li image {
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mineContent .ul .li navigator {
+  padding: 1em;
+  border-bottom: 1px solid #eee;
+}
+
+.mineContent .ul .li text {
+  padding: 0 0.5em;
+}
+
+.mineContent .ul .li .rightarr {
+  float: right;
+}

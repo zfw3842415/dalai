@@ -1,0 +1,78 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/rule/rule",
+    "pages/newslist/newslist",
+    "pages/news/news",
+    "pages/info/info",
+    "pages/myactivity/myactivity",
+    "pages/activity/activity",
+    "pages/activity-input/activity-input",
+    "pages/vip-Recharge/vip-Recharge",
+    "pages/Apprentice/Apprentice",
+    "pages/mine/mine",
+    "pages/master/master",
+    "pages/studentShow/studentShow",
+    "pages/TeacherShow/TeacherShow",
+    "pages/activityPhotos/activityPhotos",
+    "pages/Release/Release",
+    "pages/shop/shop",
+    "pages/photos/photos",
+    "pages/card/card",
+    "pages/cash/cash",
+    "pages/income/income",
+    "pages/activityshow/activityshow",
+    "pages/Recharge/Recharge",
+    "pages/bill/bill",
+    "pages/contact/contact",
+    "pages/newshow/newshow",
+    "pages/Invitation/Invitation",
+    "pages/gift/gift",
+    "pages/money/money",
+    "pages/shopshow/shopshow",
+    "pages/head/head",
+    "pages/logs/logs",
+    "pages/masterlist/masterlist"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "大来博物馆",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#000",
+    "borderStyle": "white",
+    "backgroundColor": "#eee",
+    "list": [
+      {
+        "selectedIconPath": "pages/images/ico/index-active.png",
+        "iconPath": "pages/images/ico/index.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "pages/images/ico/pic.png",
+        "iconPath": "pages/images/ico/pic2.png",
+        "pagePath": "pages/activity/activity",
+        "text": "作品"
+      },
+      {
+        "selectedIconPath": "pages/images/ico/shop-active.png",
+        "iconPath": "pages/images/ico/shop.png",
+        "pagePath": "pages/shop/shop",
+        "text": "合作单位"
+      },
+      {
+        "selectedIconPath": "pages/images/ico/mine-active.png",
+        "iconPath": "pages/images/ico/mine.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

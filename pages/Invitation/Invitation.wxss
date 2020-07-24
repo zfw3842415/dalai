@@ -1,0 +1,52 @@
+/* pages/Invitation/Invitation.wxss */
+.invitationContent{
+  background: #fff;
+  margin: 0.5em;
+}
+.invitationContent .ul .li{
+  width: 47.3%;
+  margin: 0.3em 0.3em 0.75em 0.3em;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  display: inline-block;
+  padding-bottom: 0.5em
+}
+.invitationContent .ul .li image{
+  width: 10em;
+  height:10em
+}
+.invitationContent .ul .li button{
+  width: 100%
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

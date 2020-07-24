@@ -1,0 +1,64 @@
+/* pages/bill/bill.wxss */
+.billContent{
+  background: #fff;
+  margin: 0.5em;
+}
+.billContent .ul .li{
+  display: flex;
+  padding: 1em;
+  border-bottom: 1px solid #eee
+}
+.billContent .ul .li .bill-item{
+  flex: 4;
+}
+.billContent .ul .li .bill-item.billmoney{
+  flex: 1;
+  text-align: right;
+}
+.billContent .ul .li .bill-item.billmoney text{
+  font-size: 1.3em;
+  font-weight: bold
+}
+.billContent .ul .li .bill-item.billmoney .jia{
+  color: #ffd500;
+}
+.billContent .ul .li .bill-item .title{
+  font-size: 1em;
+}
+.billContent .ul .li .bill-item .p{
+  font-size: 0.85em;
+  color: #b5b5b5;
+  padding: 0.5em 0 0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

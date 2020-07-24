@@ -1,0 +1,17 @@
+<!--pages/newslist/newslist.wxml-->
+<view></view>
+<view class="content">
+  <view class="newslistContent">
+    <view class="ul">
+      <block wx:for="{{favlist}}">
+        <view class="li">
+          <view class="newslistItem">
+            <view class="p">{{item.message}}</view>
+            <view class="span">{{item.messageDate}}</view>
+          </view>
+        </view>
+      </block>
+
+    </view>
+  </view>
+</view>

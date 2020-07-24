@@ -1,0 +1,31 @@
+<!--pages/activity/activity.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+  <view class="activityContent">
+    <view class="ul">
+      <block wx:for="{{activityList}}">
+        <view class="li">
+          <view class="liCon">
+            <view class="item a_content">
+              <view class="p">{{item.activityName}}</view>
+              <view class="span">发布日期：{{item.activityStartTime}}</view>
+              <view class="span">作品地址：{{item.activityPos}}</view>
+              <view class="span">竞拍金额：{{item.activityDeposit}}</view>
+              <view class="span">作品简介：{{item.activityInfo}}</view>
+            </view>
+            <view class="img">
+              <image src="../images/other/1.png" mode="aspectFill"></image>
+              <image src="../images/other/2.jpg" mode="aspectFill"></image>
+              <image src="../images/other/3.png" mode="aspectFill"></image>
+            </view>
+          </view>
+          <button bindtap="joinActivity" data-price="{{item.activityDeposit}}" data-index="{{item.id}}">参与竞拍</button>
+        </view>
+      </block>
+    </view>
+    <view class="Release">
+      <navigator url="../activity-input/activity-input">发布</navigator>
+    </view>
+
+  </view>
+</view>

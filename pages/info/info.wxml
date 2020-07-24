@@ -1,0 +1,73 @@
+<!--pages/personalInfo/personalInfo.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+  <view class="personalinfoCon">
+    <form bindsubmit="formSubmit">
+      <view class="tui-picker-content">
+        <text>性别：</text>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+        </picker>
+      </view>
+      <view class="tui-picker-content">
+        <text>身份：</text>
+        <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
+          <view class="picker">
+            {{array2[index2]}}
+          </view>
+        </picker>
+      </view>
+      <block wx:if="{{type==0}}">
+        <label>
+          <text>手机：</text>
+          <button type="default" class="addImage" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button>
+        </label>
+      </block>
+      <!-- <label>
+        <text>球龄：</text>
+        <input name="year" type="num" placeholder='请输入球龄' value="{{userinfo.year}}"></input>
+      </label>
+      <label>
+        <text>签名：</text>
+        <input name="moment" placeholder='请输签名（5-10个字符）' value="{{userinfo.moment}}"></input>
+      </label>
+      <label>
+        <text>职业：</text>
+        <input name="profession" placeholder='请输职业（5-10个字符）' value="{{userinfo.profession}}"></input>
+      </label>
+      <label>
+        <text>擅长：</text>
+        <input name="expert" placeholder='请填写擅长（5-10个字符）' value="{{userinfo.expert}}"></input>
+      </label>
+      <label>
+        <text>记录：</text>
+        <input name="bestResult" type="num" placeholder='请填写杆数' value="{{userinfo.bestResult}}"></input>
+      </label>
+      <label>
+        <text>爱好：</text>
+        <input name="favourite" placeholder='请输爱好（5-10个字符）' value="{{userinfo.favourite}}"></input>
+      </label> -->
+      <block wx:if="{{type==0}}">
+        <label>
+          <text>推荐人:</text>
+          <input name="shareId" type="num" value="{{userinfo.favourite}}"></input>
+        </label>
+      </block>
+      <!-- <label style="padding-top:1em">
+        <text>其他球类:</text>
+        <checkbox-group bindchange="checkboxChange" class="ball">
+          <block wx:for="{{ballList}}">
+            <checkbox value='{{item.ball}}' checked="{{item.checked}}" style="margin:0.5em">{{item.ball}}</checkbox>
+          </block>
+        </checkbox-group>
+      </label> -->
+      <label>
+        <text style="vertical-align:top;margin-top:0.75em">简介：</text>
+        <textarea name="meno" placeholder='请输简介（5-25个字符）' value="{{userinfo.meno}}"></textarea>
+      </label>
+      <button class="suc" formType="submit" style="margin-top:1em">保存</button>
+    </form>
+  </view>
+</view>

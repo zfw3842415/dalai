@@ -1,0 +1,334 @@
+/* pages/Release/Release.wxss */
+.border-bg{
+  width: 35em;
+  height: 35em;
+ 
+}
+
+
+.release{
+  color: #000;
+  background: #eff5f7;
+  margin: 0 0.5em;
+  border-radius: 0.2em;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+  padding: 0 0 5em
+}
+.release .li{
+  padding: 0.3em;
+  border-bottom: 1px solid #eee
+}
+.release .li text{
+  width: 25%;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 200
+}
+.release .li input{
+  width: 74%;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 100
+}
+.release .li textarea{
+  width: 100%;
+  background: rgba(255,255,255,0.5);
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  z-index: 1;
+  min-height: 5em;
+  font-size: 0.85em;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* pages/picker/picker.wxss */
+page{background-color: #efeff4;}
+.tui-picker-content{
+  padding: 0 0;
+  width: 74%;
+  display: inline-block;
+  vertical-align: middle;height: 80rpx;
+  line-height: 80rpx;
+
+}
+
+.tui-picker-detail{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 35rpx;
+  overflow: hidden;
+}
+.tui-picker-content picker{
+  padding: 0 10px;
+  font-weight: 200
+}
+
+.Become text{
+  padding: 0.75em;
+  text-align: center;
+  display: block;
+  color: #fff
+}
+
+
+
+
+
+
+
+
+
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+  min-height: 300rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999999999;
+  background: #ededed;
+  padding-top: 20rpx;
+}
+
+
+.commodity_attr_box .ul{
+  text-align: center;
+}
+.commodity_attr_box .ul .li{
+  display: inline-block;
+  width: 30%;
+  background: #fff;
+  box-shadow: 0 0 1em rgba(0,0,0,0.1);
+  padding:0.5em 0.35em;
+  box-sizing: border-box;
+  margin: 0.2em;
+  position: relative;
+}
+.commodity_attr_box .ul .li checkbox{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+checkbox .wx-checkbox-input{
+border-radius: 50%;/* 圆角 */
+width: 40rpx; /* 背景的宽 */
+height: 40rpx; /* 背景的高 */
+border: none;
+background: none;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  border: none;
+  background: #000;
+  color: #fff
+}
+
+
+.commodity_attr_box .ul .li .p{
+ font-weight: 100 
+}
+.commodity_attr_box .ul .li image{
+  width: 6em;
+  height: 6em;
+  border-radius: 50%
+}
+
+
+.commodity_attr_box .title{
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 200;
+  padding: 0 0 0.5em;
+  border-bottom: 1px solid #b3b3b3;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+.commodity_attr_box .title .close{
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  right: 0.5em;
+  top: 0
+}
+
+
+.commodity_attr_box button{
+   background: radial-gradient(rgb(82, 82, 82), rgb(49, 49, 49), rgb(0, 0, 0)); 
+   color: #fff;
+   margin-bottom: 0.25em
+}
+.commodity_attr_box button:active{
+  background: radial-gradient(rgb(58, 58, 58), rgb(29, 29, 29), rgb(0, 0, 0)); 
+}
+
+
+
+
+
+
+
+
+
+
+.zan-dialog__mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.zan-dialog__container {
+  position: fixed;
+  bottom: 400rpx;
+  width: 650rpx;
+  margin-left: 50rpx;
+  background: #f8f8f8;
+  transform: translateY(300%);
+  transition: all 0.4s ease;
+  z-index: 12;
+  border-radius: 20rpx;
+  box-shadow: 0 0 0.5em rgba(0,0,0,0.5)
+}
+
+.zan-dialog--show .zan-dialog__container {
+  transform: translateY(0);
+}
+
+.zan-dialog--show .zan-dialog__mask {
+  display: block;
+}
+.more{
+  padding:0.75em;
+}
+.more .h3{
+  font-size: 1.2em;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0.5em
+}
+.more .p{
+  font-size: 0.9em;
+  font-weight: 200;
+}
+.more button{
+  display: block;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background: radial-gradient(rgb(82, 82, 82), rgb(49, 49, 49), rgb(0, 0, 0)); 
+  margin: 0.75em auto;
+  color: #fff;
+  line-height: 5em;
+  font-weight: 200;
+  padding: 0;
+  text-align: center
+}
+
+
+.money{
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 0.75em
+}
+
+
+
+
+.question-images-area {
+  padding: 40rpx 0;
+}
+
+.question-images-tool {
+  display: flex;
+  align-items: center;
+}
+
+.question-images {
+  display: flex;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.q-image-wrap {
+  width: 31%;
+  margin-right: 10rpx;
+}
+
+.q-image {
+  flex: 1;
+  height: 200rpx;
+  width: 100%;
+}
+
+.q-image-remover {
+  text-align: center;
+}
+
+/* .weui-btn{
+  background: #000;
+  color: #fff;
+  padding: 0.75em;
+  width: 95%
+} */
+
+
+
+.release{
+  position: relative;
+}
+.question-images-tool button,.weui-btn{
+  width: 48%;
+  position: absolute;
+  bottom: 0%;
+  font-size: 0.95em;
+  display: block;
+  font-weight: 500;
+  padding: 1em 0;
+  color: #fff;
+}
+.question-images-tool button{
+  border-radius: 10em 0 0 10em;
+  background: #c00000;
+}
+.weui-btn{
+  right: 0;
+  border-radius:0 10em 10em 0;
+  background: #000;
+}

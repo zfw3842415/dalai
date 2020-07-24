@@ -1,0 +1,81 @@
+/* pages/income/income.wxss */
+.incomeContent{
+  background: #fff;
+  margin: 0.5em
+}
+.incomeTitle{
+  text-align: center;
+  padding: 2em 0;
+  background: #f5f5f5
+}
+.incomeTitle .span{
+  font-size: 0.85em;
+}
+.incomeTitle .h3{
+  font-size: 3em;
+  font-weight: bold;
+  padding: 0.5em 0;
+}
+.incomeTitle .h3 text{
+  font-size: 0.5em;
+  font-weight: 200;
+}
+.time{
+  display: flex;
+}
+.time picker{
+  flex: 1;
+  padding: 0.75em 0.5em;
+  font-size: 0.85em;
+  color: #666;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee
+}
+.time picker:last-child{
+  border-right: 0
+}
+
+.incomeContent .ul .li{
+  display: flex;
+}
+.incomeContent .ul .li text{
+  flex: 1;
+  padding: 0.75em 0.5em;
+  border-bottom: 1px solid #eee
+}
+
+.aligncenter{
+  text-align: center;
+}
+.alignright{
+  text-align: right;
+}
+.red{
+  color: #f00;
+}
+
+.incomeTitle navigator{
+  width: 50%;
+  color: #fff;
+  background: #0071bd;
+  padding: 0.75em 0;
+  text-align: center;
+  margin:0 auto;
+  display: block;
+  border-radius: 0.2em
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

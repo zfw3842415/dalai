@@ -1,0 +1,60 @@
+/* pages/Recharge/Recharge.wxss */
+page,.content{
+  height: 100%;
+}
+.rechargeContent{
+  background: #f5f5f5;
+  margin:0 0.5em;
+  height: 100%
+}
+.rechargeContent .ul{
+  background: #fff;
+  margin-bottom: 0.35em
+}
+.rechargeContent .ul .li navigator{
+  padding: 0.75em;
+  border-top: 1px solid #eee;
+}
+.rechargeContent .ul .li navigator{
+  display: flex;
+}
+.rechargeContent .ul .li navigator .item{
+  flex: 1;
+}
+.rechargeContent .ul .li navigator image{
+  width: 1.5em;
+  height: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

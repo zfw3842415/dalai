@@ -1,0 +1,39 @@
+<!--pages/money/money.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+    <view class="balance">
+        <text>果岭币余额</text>
+        <view class="money">
+            ￥600
+        </view>
+    </view>
+
+
+    <view class="Amount">
+        <text>充值金额</text>
+        <view class="title">
+           <text>￥</text>
+           <input type="number"></input>
+        </view>
+
+
+    <!-- <view class="btn">
+        <navigator class="moneyBtn" url="../bill/bill">球币账单</navigator>
+    </view> -->
+    <button class="cz-btn">充值</button>
+
+    </view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+<!--pages/Recharge/Recharge.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+    <view class="rechargeContent">
+        <view class="ul">
+          <!-- <view class="li">
+              <navigator url="../money/money">
+                  <text class="item">果岭币（充值）</text>
+                  <view class="img">
+                    <image src="../images/ico/arrow-right.png" mode="aspectFill"></image>
+                  </view>
+              </navigator>
+          </view> -->
+          <view class="li">
+              <navigator url="../vip-Recharge/vip-Recharge">
+                  <text class="item">会费（充值）</text>
+                  <view class="img">
+                    <image src="../images/ico/arrow-right.png" mode="aspectFill"></image>
+                  </view>
+              </navigator>
+          </view>
+        </view>
+
+        <view class="ul">
+            <view class="li">
+                <navigator url="../bill/bill">收支明细</navigator>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

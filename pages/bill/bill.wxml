@@ -1,0 +1,119 @@
+<!--pages/bill/bill.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+    <view class="billContent">
+        <view class="ul">
+            <view class="li">
+                <view class="bill-item">
+                    <view class="title">果岭币充值</view>
+                    <view class="p">11月28日 11：01</view>
+                </view>
+                <view class="bill-item billmoney">
+                    <text class="jia">+600.00</text>
+                </view>
+            </view>
+            <view class="li">
+                <view class="bill-item">
+                    <view class="title">给一杆入魂送出鲜花十朵</view>
+                    <view class="p">11月28日 11：01</view>
+                </view>
+                <view class="bill-item billmoney">
+                    <text>-150.00</text>
+                </view>
+            </view>
+            <view class="li">
+                <view class="bill-item">
+                    <view class="title">给二杆涅槃送出球衣十件</view>
+                    <view class="p">11月28日 11：01</view>
+                </view>
+                <view class="bill-item billmoney">
+                    <text>-150.00</text>
+                </view>
+            </view>
+            <view class="li">
+                <view class="bill-item">
+                    <view class="title">给二杆涅槃送出高尔夫球十个</view>
+                    <view class="p">11月28日 11：01</view>
+                </view>
+                <view class="bill-item billmoney">
+                    <text>-150.00</text>
+                </view>
+            </view>
+            <view class="li">
+                <view class="bill-item">
+                    <view class="title">果岭币充值</view>
+                    <view class="p">11月28日 11：01</view>
+                </view>
+                <view class="bill-item billmoney">
+                    <text class="jia">+600.00</text>
+                </view>
+            </view>
+            <view class="li">
+                <view class="bill-item">
+                    <view class="title">给一杆入魂送出鲜花十朵</view>
+                    <view class="p">11月28日 11：01</view>
+                </view>
+                <view class="bill-item billmoney">
+                    <text>-150.00</text>
+                </view>
+            </view>
+            <view class="li">
+                <view class="bill-item">
+                    <view class="title">给二杆涅槃送出球衣十件</view>
+                    <view class="p">11月28日 11：01</view>
+                </view>
+                <view class="bill-item billmoney">
+                    <text>-150.00</text>
+                </view>
+            </view>
+            <view class="li">
+                <view class="bill-item">
+                    <view class="title">给二杆涅槃送出高尔夫球十个</view>
+                    <view class="p">11月28日 11：01</view>
+                </view>
+                <view class="bill-item billmoney">
+                    <text>-150.00</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

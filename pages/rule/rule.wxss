@@ -1,0 +1,61 @@
+/* pages/rule/rule.wxss */
+.ruleContent{
+  background: #fff;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+.ruleContent .h3{
+  padding: 0.5em 0;
+}
+.ruleContent .p{
+  font-size: 0.85em;
+  margin-bottom: 0.75em;
+}
+
+.ruleContent .h1{
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  padding: 2% 0 5%;
+}
+.ruleContent .logo{
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+.bor{
+  border: 2px solid #c00000;
+  border-radius: 0.5em;
+  padding: 2%;
+  margin: 5% 0;
+}
+.bor .h3{
+  margin: 2%;
+  background: #c00000;
+  text-align: center;
+  color: #fff;
+}
+
+.imgcon image{
+  width: 100%;
+  height: 170em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+<!--pages/master/master.wxml-->
+<!-- <view class="border-bg"></view> -->
+<view class="content">
+  <view class="masterContent">
+    <view class="ul">
+      <block wx:for="{{activityList}}">
+        <view class="li">
+          <image src="{{item.avatarUrl}}" mode='aspectFill'></image>
+          <view class="text">
+            <view class="h3">{{item.weixinNickName}}<text wx:if="{{item.sex==0}}" style="margin-left:0.1em;font-size:0.7em">男</text>
+            <text wx:if="{{item.sex==1}}" style="margin-left:0.1em;font-size:0.7em">女</text></view>
+            <view class="p">电话：{{item.phone}}</view>
+             <image src="../images/ico/phone.png" style="width:20px;height:20px;vertical-align:middle" bindtap="callPhone" data-phone="{{item.phone}}"></image>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

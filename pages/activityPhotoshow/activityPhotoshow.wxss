@@ -1,0 +1,30 @@
+/* pages/activityPhotoshow/activityPhotoshow.wxss */
+.content{
+  position: relative;
+  margin:0.5em;
+  background: #fff;
+  padding: 0.35em;
+  box-shadow: 0 0 0.75em rgba(0,0,0,0.5)
+}
+.ap-showCon{
+  font-size: 0.9em;
+  font-weight: 300;
+  padding-bottom: 0.35em;
+  line-height: 1.5;
+  text-align: center;
+}
+.ap-showCon .h3{
+  font-size: 1.3em;
+  font-weight: bold;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0.5em;
+}
+.ap-showImg image{
+  width: 100%;
+  height: 280px
+}
+
+
+
+

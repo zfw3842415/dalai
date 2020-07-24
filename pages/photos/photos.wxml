@@ -1,0 +1,24 @@
+<!--pages/img/img.wxml-->
+<view class="border-bg"></view>
+
+<view class="content">
+  <view class="imgul">
+    <view class='imgList-li' wx:for='{{imgArr}}'>
+      <image class='img' mode='aspectFill' src='{{item}}' data-index='{{index}}' bindtap='previewImg'></image>
+      <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage" wx:if="{{images.length>0}}">删除</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="question-images-area">
+
+  <!-- 添加图片按钮  -->
+  <view class="question-images-tool addimg">
+    <button bindtap="chooseImage" wx:if="{{images.length < 6}}">添加图片</button>
+  </view>
+  <view class="question-images-tool subimg">
+    <button bindtap="uploadImage">上传图片</button>
+  </view>
+
+</view>

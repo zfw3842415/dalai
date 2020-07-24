@@ -1,0 +1,152 @@
+<!--index.wxml-->
+<view class="border-bg"></view>
+
+<view class="container">
+
+  <view class="fixed">
+    <!-- 搜索 -->
+    <view class="search">
+      <navigator url="../search/search">
+        <image src="../images/ico/search.png"></image>
+        <text>搜索</text>
+      </navigator>
+    </view>
+    <!-- banner -->
+    <view class="banner">
+      <swiper indicator-dots="true" autoplay="true" indicator-color="white" indicator-active-color="#e0c185">
+        <swiper-item>
+          <view class="swiper-item">
+            <image src="../images/banner/01.jpg" mode="aspectFill"></image>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <view class="swiper-item">
+            <image src="../images/banner/02.jpg" mode="aspectFill"></image>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <view class="swiper-item">
+            <image src="../images/banner/03.jpg" mode="aspectFill"></image>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <view class="swiper-item">
+            <image src="../images/banner/04.jpg" mode="aspectFill"></image>
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+
+    <view class="in_title">
+      <navigator url="../Apprentice/Apprentice?type=0">
+        <text>艺术家</text>
+      </navigator>
+      <navigator url="../Apprentice/Apprentice?type=1">
+        <text>藏家</text>
+      </navigator>
+      <navigator url="../Apprentice/Apprentice?type=2">
+        <text>站内</text>
+        <text class="num" wx:if="{{msgCount>0}}">{{msgCount}}</text>
+      </navigator>
+      <navigator url="../Release/Release">
+        <image src="../images/ico/camera.png"></image>
+      </navigator>
+    </view>
+  </view>
+
+
+
+
+  <!-- <view class='contentBottom'>
+    <swiper class="tab-right" vertical="true" autoplay="false" circular="true" interval="2000" display-multiple-items='4'>
+      <view class="right-item">
+        <block wx:for-index="idx" wx:for='{{aa}}'>
+          <swiper-item>
+            <view class='content-item'>
+              <text class='name'>{{item.text}}</text>
+            </view>
+          </swiper-item>
+        </block>
+
+      </view>
+    </swiper>
+  </view> -->
+
+
+
+
+  <view class="infotext">
+    <swiper autoplay="true" interval="2000" circular="true" vertical="true">
+      <block wx:for-index="idx" wx:for='{{aa}}'>
+          <swiper-item>
+            <view class='content-item'>
+              <text class='name'>{{item.text}}</text>
+            </view>
+          </swiper-item>
+        </block>
+    </swiper>
+  </view>
+
+
+
+
+
+
+
+
+
+  <view class="indexCon">
+
+    <!-- 教练 -->
+
+
+    <scroll-view class='swiper_con scroll-view-container' bindtouchstart="start_fn" bindtouchend="end_fn" scroll-y="true" lower-threshold='30' upper-threshold='0' enable-back-to-top="true">
+      <block wx:for="{{momentList}}" wx:for-index="idx" wx:key="item.id">
+        <view class="navigator content-view" bindtap="viewDetail" data-id="{{item.mId}}" data-type="{{item.type}}">
+          <view class="swiperCon-title">
+            <view class="head_pic">
+              <image src="{{item.avatarUrl}}"></image>
+            </view>
+            <view class="info">
+              <view class="name">{{item.weixinNickName}}</view>
+              <view class="other_info">
+                <!-- <text class="flex-left">藏龄：{{item.year}}年</text> -->
+                <!-- <text class="flex-right">职业：{{item.career}}</text> -->
+              </view>
+            </view>
+          </view>
+          <view class='imgList'>
+            <view class="p">
+              <text>{{item.content}}</text>
+              <text class="time">{{item.date}}</text>
+            </view>
+          </view>
+        </view>
+        <view class='imgList'>
+          <view class='imgList-li' wx:for='{{item.imageUrl}}' wx:for-index="index">
+            <image class='img' mode="aspectFill" src='{{imagesUrl}}//{{item}}' data-parent="{{idx}}" data-index="{{index}}" data-src='{{imagesUrl}}//{{item}}' bindtap='previewMomentImg'></image>
+          </view>
+        </view>
+        <!-- <block wx:if="{{item.relationStatus!=1}}">
+          <view class="yaoyueCon">
+            <block wx:if="{{item.type==1}}">
+              <button class="baishibtn" bindtap="getRelation" data-type="1" data-rid="{{item.mId}}">投资</button>
+            </block>
+            <block wx:if="{{item.type==0}}">
+              <button class="baishibtn" bindtap="getRelation" data-type="2" data-rid="{{item.mId}}">点赞</button>
+            </block>
+          </view>
+        </block> -->
+
+        <view class="swiper_conF">
+          <view class="ico_item {{item.activeFoucs==1? 'active':''}}" data-rid="{{item.mId}}" data-index="{{idx}}" data-type="{{item.type}}" bindtap="modalcnt">
+            <view class="iconfont icon-z-like "></view>
+            <text>购买</text>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+    <view class="load" wx:if="{{listTotal!=listCount}}">上滑加载更多...</view>
+    <!-- 学员 -->
+  </view>
+</view>

@@ -1,0 +1,111 @@
+<!--pages/coachshow/coachshow.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+  <swiper indicator-dots="true" autoplay="true" class="coachbanner" indicator-color="#999" indicator-active-color="#e0c185">
+    <block wx:for="{{imgArr}}">
+      <swiper-item>
+        <view class="swiper-item">
+          <image mode='aspectFill' src="{{imagesUrl}}//{{item.imageUrl}}"></image>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- <view class="gift">
+        <view class="giftp-title">她收到的礼物</view>
+        <view class="ul">
+            <view class="li">
+                <image mode='aspectFill' src="../images/ico/gift/zan.png"></image>
+                <text>赞：666</text>
+            </view>
+            <view class="li">
+                <image mode='aspectFill' src="../images/ico/gift/huaduo.png"></image>
+                <text>花：666</text>
+            </view>
+            <view class="li">
+                <image mode='aspectFill' src="../images/ico/gift/gaoerfu.png"></image>
+                <text>球：666</text>
+            </view>
+            <view class="li">
+                <image mode='aspectFill' src="../images/ico/gift/bangqiumao.png"></image>
+                <text>帽：666</text>
+            </view>
+            <view class="li">
+                <image mode='aspectFill' src="../images/ico/gift/qiuyi.png"></image>
+                <text>衣：666</text>
+            </view>
+            <view class="li">
+                <image mode='aspectFill' src="../images/ico/gift/gaoerfuqiu.png"></image>
+                <text>杆：666</text>
+            </view>
+        </view>
+    </view> -->
+
+
+
+
+
+  <view class="coachCon">
+    <view class="name">
+      <text class="name-text">{{userinfo.weixinNickName}} 
+        <!-- <text wx:if="{{userinfo.sex==0}}" style="margin-left:-0.5em;font-size:0.7em">男</text>
+        <text wx:if="{{userinfo.sex==1}}" style="margin-left:-0.5em;font-size:0.7em">女</text> -->
+      </text>
+      <!-- <text class="year">积分：1000</text> -->
+    </view>
+
+    <view class="coachInfo">
+      <view class="ul">
+        <view class="li li-item">
+          <text class="text">{{userinfo.meno}}</text>
+          <!-- <view class="text">
+            <button>邀请(2人邀请)</button>
+          </view> -->
+        </view>
+        <view class="li">藏家身份：{{userinfo.profession}}</view>
+        <view class="li">收藏爱好：{{userinfo.favourite}}</view>
+        <view class="li">主要收藏：{{userinfo.expert}}</view>
+         <!-- <view class="li">其他球类：{{userinfo.ball}}</view> -->
+        <block wx:if="{{userinfo.phone.length>0}}">
+          <view class="li">电话:{{userinfo.phone}}
+            <image src="../images/ico/phone.png" style="width:20px;height:20px;vertical-align:middle" bindtap="callPhone" data-phone="{{userinfo.phone}}"></image>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="hisactivity">
+      <view class="hisactivity_title">
+        <text class="text">藏友圈</text>
+        <navigator class="text right" url="../activityPhotos/activityPhotos?id={{userinfo.id}}">
+          查看更多
+        </navigator>
+      </view>
+      <block wx:if="{{momentInfo.date.length>0}}">
+        <view class="hisactivityCon">
+          <view class="p">时间：{{momentInfo.date}};{{momentInfo.content}}</view>
+          <view class="img">
+            <view class='imgList-li' wx:for='{{momentInfo.imageUrl}}' wx:for-index="index">
+              <image class='img' mode='aspectFill' src='{{imagesUrl}}/{{item}}' data-index='{{index}}' bindtap='previewImg'></image>
+            </view>
+          </view>
+        </view>
+      </block>
+
+
+
+
+    </view>
+
+
+
+
+
+
+
+    <block wx:if="{{relationshop==0}}">
+      <view class="Become">
+        <button class="buy" bindtap="modalcnt">购买</button>
+        <button class="baishibtn" bindtap="buy" data-type="1" data-rid="{{userinfo.id}}">点赞</button>
+      </view>
+    </block>
+  </view>
+</view>

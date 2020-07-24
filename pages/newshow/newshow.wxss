@@ -1,0 +1,34 @@
+/* pages/newshow/newshow.wxss */
+
+.newshow{
+  background: #fff;
+  margin: 0.5em;
+  min-height: 20em;
+  padding: 1em;
+  text-align: center
+}
+
+.newshow image{
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+}
+.newshow .h3{
+  margin-bottom: 1em;
+}
+
+.btn {
+  margin-top: 2.5em
+}
+.btn .btn-item{
+  background: #eee;
+  width: 60%;
+  margin: 0.35em auto;
+  padding: 1em 0;
+  font-weight: bold
+}
+.btn .btn-item.yes{
+  background: #437ed8;
+  color: #fff
+}
+

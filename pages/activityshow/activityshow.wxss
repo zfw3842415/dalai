@@ -1,0 +1,40 @@
+/* pages/activityshow/activityshow.wxss */
+.ashow_content{
+  background: #fff;
+  margin: 0.5em;
+  font-size: 0.85em;
+  padding: 0 0.75em;
+  min-height: 20em
+}
+.ashow_content .h3{
+  font-size: 1.5em;
+  text-align: center;
+  padding: 0.35em;
+  font-weight: bold;
+}
+.ashow_content .date{
+  text-align: center;
+  padding-bottom: 0.75em
+}
+.ashow_content .p{
+  line-height: 1.75
+}
+.ashow_content image{
+  width: 100%;
+}
+.as_content{
+  padding-bottom: 3em
+}
+
+
+.btn {
+  position: fixed;
+  bottom: 1%;
+  left: 0;
+  width: 100%;
+}
+
+
+
+
+

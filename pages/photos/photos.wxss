@@ -1,0 +1,109 @@
+/* pages/img/img.wxss */
+
+.border-bg {
+  width: 35em;
+  height: 35em;
+}
+
+.imgul {
+  width: 100%;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+.imgList-li {
+  background: #fff;
+  width: 325rpx;
+  display: inline-block; /*内部卡片需要设置为inline-block,否则会截断显示，如图一*/
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx 15rpx;
+  margin: 0.2em;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.imgList-li image {
+  width: 100%;
+}
+
+.question-images-area {
+  position: fixed;
+  width: 90%;
+  bottom: 1%;
+  z-index: 55;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.question-images-area button {
+  width: 100%;
+  display: block;
+  font-weight: 500;
+  font-size: 0.85em;
+  padding: 8% 0;
+  box-sizing: border-box;
+}
+
+.question-images-tool {
+  align-items: center;
+  width: 49%;
+  border-left: 1px #fff solid;
+  flex: 1;
+  margin: 1%;
+}
+
+.question-images {
+  display: flex;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.q-image-wrap {
+  width: 31%;
+  margin-right: 10rpx;
+}
+
+.q-image {
+  flex: 1;
+  height: 200rpx;
+  width: 100%;
+}
+
+.q-image-remover {
+  text-align: center;
+}
+
+.weui-btn {
+  background: #000;
+  color: #fff;
+  padding: 0.75em;
+  width: 95%;
+}
+
+
+.addimg button{
+  background: #c00000;
+  color: #fff;
+  border-radius: 10em 0 0 10em;
+}
+.subimg button{
+  background: #000;
+  color: #fff;
+  border-radius: 0 10em 10em 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

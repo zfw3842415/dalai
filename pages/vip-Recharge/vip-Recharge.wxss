@@ -1,0 +1,103 @@
+/* pages/vip-Recharge/vip-Recharge.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+.viptitle{
+  background: rgb(29, 29, 29);
+  padding: 1em 0 1.5em;
+  margin: 0.5em;
+  box-shadow: 0 0 1em rgba(0,0,0,0.5)
+}
+.Expire{
+  text-align: center;
+  color: rgba(255,255,255,0.3);
+  font-size: 0.85em;
+  padding: 0.35em 0
+}
+.vipCon{
+  background: #fff;
+  margin: 0 0.5em;
+  padding:1em 0.5em
+}
+.vipCon .ul .li{
+  width: 46%;
+  text-align: center;
+  border: 1px solid #eee;
+  border-radius: 0.5em;
+  padding: 1.5em 0;
+  display: inline-block;
+  margin: 0.3em;
+  position: relative;
+}
+.vipCon .ul .li.active{
+  background: #fcf2d9;
+  border: 1px solid #e0c671;
+}
+.vipCon .ul .li .em{
+  position: absolute;
+  right: 0;
+  top: -0.85em;
+  display: block;
+  background: -webkit-linear-gradient(left,#b71be0,#6e18db);
+  font-size: 0.85em;
+  color: #fff;
+  padding: 0.25em 1em;
+  border-radius: 0 0.75em 0 0.75em
+}
+.vipCon .ul {
+  text-align: center
+}
+.vipCon .ul .li .tit{
+  font-size: 1em;
+  font-weight: bold;
+}
+.vipCon .ul .li .money{
+  color: #f7c852;
+}
+.vipCon .ul .li .money .span{
+  font-size: 0.7em
+}
+.vipCon .ul .li .money .moneytext{
+  letter-spacing: -1px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.vipCon .ul .li .money .font{
+  display: block;
+  font-size: 0.85em;
+  color: #999;
+}
+
+.btn{
+  position: fixed;
+  padding: 0.5em 0;
+  text-align: center;
+  background: -webkit-linear-gradient(left,#fedd8c,#f2cd58);
+  color: #684400;
+  width: 95%;
+  left: 50%;
+  bottom: 2%;
+  transform: translate(-50%,0);
+  border-radius: 10em
+}
+.btn:active{
+  background: -webkit-linear-gradient(left,#f1d180,#eec84d);
+}
+
+
+
+
+

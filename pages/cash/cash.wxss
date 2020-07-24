@@ -1,0 +1,111 @@
+/* pages/cash/cash.wxss */
+.cashContent{
+  background: #e6e6e6;
+  margin: 0.5em; 
+}
+.cashTitle{
+  background: #fff;
+}
+.cashTitle image{
+  width: 7em;
+  height: 3em
+}
+.cashTitle navigator{
+  display: flex;
+  align-items:center;
+}
+.cashTitle navigator .flex{
+  flex: 1;
+  font-size: 0.85em;
+  padding: 0.5em;
+  color: #9a9a9a
+}
+.cashTitle navigator .flex2{
+  flex: 2;
+}
+
+.cashCon{
+  background: #fff;
+  margin-top: 0.5em;
+  padding:0.75em 0.5em;
+  min-height: 20em
+}
+.cashInput{
+  border-bottom: 1px solid #eee;
+  color: #de3248;
+}
+.cashInput text{
+  vertical-align: middle
+}
+.cashInput input{
+  display: inline-block;
+  width: 95%;
+  vertical-align: middle;
+  padding: 0.5em 0;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+
+.tx{
+  font-size: 0.85em;
+  display: flex;
+}
+.tx text{
+  flex: 1;
+  padding:0.75em 0.5em
+}
+
+.tx .alignright{
+  color: #de3248;
+}
+
+
+
+
+
+
+.fixed{
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  left: 0
+}
+.fixed .p{
+  font-size: 0.75em;
+  color: #0071bd;
+}
+.fixed button{
+  width: 90%;
+  margin: 0.5em auto;
+  background: #0071bd;
+  color: #fff;
+}
+
+.fixed button:active{
+  background: #0066aa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

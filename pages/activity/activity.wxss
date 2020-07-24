@@ -1,0 +1,84 @@
+/* pages/activity/activity.wxss */
+
+.activityContent{
+  margin: 0.5rem;
+  background: #fff;
+}
+
+.activityContent .ul{
+  padding-bottom:0em;
+}
+.activityContent .ul .li{
+  margin-bottom: 1em;
+  box-shadow: 0 0 0.5em rgba(0,0,0,0.1)
+}
+.activityContent .ul .li .liCon navigator{
+  display: flex;
+  padding: 0.5em;
+  font-size: 0.8em;
+  color: #666;
+}
+.activityContent .ul .li button{
+  display: block;
+  width: 100%;
+}
+
+.activityContent .ul .li .liCon .item{
+  flex: 3;
+}
+.activityContent .ul .li .liCon .pic{
+  flex: 1
+}
+.activityContent .ul .li .liCon .pic image{
+  width: 7em;
+  height: 7em;
+}
+.activityContent .ul .li .liCon .p{
+  font-size: 1.1em;
+  padding-bottom: 0.2em;
+  font-weight: 500;
+  color: #000
+}
+
+.a_content{
+  padding: 0 0 0 0.5em;
+  font-weight: 300;
+}
+
+.Release{
+  position: fixed;
+  bottom: 1%;
+  right: 2%;
+  transform: translate(-50%,0);
+}
+.Release navigator{
+  border-radius: 50%;
+  background: #c00000;
+  color: #fff;
+  font-size: 0.85em;
+  text-align: center;
+  width: 4em;
+  height: 4em;
+  line-height: 4em;
+}
+
+.activityContent .ul .li{
+  padding: 2%;
+}
+.activityContent .ul .li .span{
+  font-size: 0.85em;
+  margin: 2% 0;
+}
+.activityContent .ul .li .p{
+  padding: 2% 0;
+}
+.activityContent .ul .li .img{
+  display: flex;
+}
+.activityContent .ul .li .img image{
+  flex: 1;
+  width: 6.75em;
+  height: 6.75em;
+  margin: 1%;
+  
+}

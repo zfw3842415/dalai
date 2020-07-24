@@ -1,0 +1,50 @@
+.shopshowContent .pic{
+  background: #fff;
+  display: block;
+  width: 15em;
+  height: 15em;
+  margin: 0.5em auto;
+  position: relative;
+  box-shadow: 0 0 0.5em rgba(0,0,0,0.15)
+}
+.shopshowContent .pic image{
+  width: 10em;
+  height: 10em;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+}
+
+
+.shopShowTitle{
+  padding: 1em;
+  font-weight: 200;
+  text-align: center;
+  line-height: 1.5;
+}
+.shopShowTitle .h3{
+  padding-bottom:0.3em; 
+}
+
+.shopShowCon{
+  padding: 0.5em 2em;
+  line-height: 1.75;
+  border-top: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
+  font-weight: 200;
+}
+.return{
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 6em;
+  background: radial-gradient(rgb(82, 82, 82), rgb(49, 49, 49), rgb(0, 0, 0)); 
+  color: #fff;
+  margin: 0.75em auto;
+}
+.return:active{
+  background: #000; 
+}

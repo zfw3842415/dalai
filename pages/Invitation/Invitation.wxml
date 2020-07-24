@@ -1,0 +1,78 @@
+<!--pages/Invitation/Invitation.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+    <view class="invitationContent">
+        <view class="ul">
+            <view class="li">
+                <image src="http://pic1.win4000.com/wallpaper/2019-01-21/5c45322a392ff.jpg" mode="aspectFill"></image>
+                <text>Florence</text>
+                <button bindtap="yaoyue">邀约(2人邀请)</button>
+            </view>
+            <view class="li">
+                <image src="http://img.tupianzj.com/uploads/allimg/160612/9-160612100I5.jpg" mode="aspectFill"></image>
+                <text>Florence</text>
+                <button bindtap="yaoyue">邀约(2人邀请)</button>
+            </view>
+            <view class="li">
+                <image src="http://img.xyzd.cn/forum/201510/27/223217wme626iqemzezaef.jpg" mode="aspectFill"></image>
+                <text>Florence</text>
+                <button bindtap="yaoyue">邀约(2人邀请)</button>
+            </view>
+            <view class="li">
+                <image src="http://n1.itc.cn/img8/wb/recom/2016/06/17/146612737000807266.JPEG" mode="aspectFill"></image>
+                <text>Florence</text>
+                <button bindtap="yaoyue">邀约(2人邀请)</button>
+            </view>
+            <view class="li">
+                <image src="http://www.xnnews.com.cn/wenyu/lxsj/201801/W020180127172535806708.jpg" mode="aspectFill"></image>
+                <text>Florence</text>
+                <button bindtap="yaoyue">邀约(2人邀请)</button>
+            </view>
+            <view class="li">
+                <image src="http://img.tupianzj.com/uploads/allimg/160612/9-160612100H8.jpg" mode="aspectFill"></image>
+                <text>Florence</text>
+                <button bindtap="yaoyue">邀约(2人邀请)</button>
+            </view>
+            <view class="li">
+                <image src="http://www.xnnews.com.cn/wenyu/lxsj/201801/W020180127172540801873.jpg" mode="aspectFill"></image>
+                <text>Florence</text>
+                <button bindtap="yaoyue">邀约(2人邀请)</button>
+            </view>
+            <view class="li">
+                <image src="http://www.xnnews.com.cn/wenyu/lxsj/201801/W020180127172605075516.jpg" mode="aspectFill"></image>
+                <text>Florence</text>
+                <button bindtap="yaoyue">邀约(2人邀请)</button>
+            </view>
+            <view class="li">
+                <image src="http://n.sinaimg.cn/sinacn/w660h953/20180228/e11e-fyrzexa6227048.jpg" mode="aspectFill"></image>
+                <text>Florence</text>
+                <button bindtap="yaoyue">邀约(2人邀请)</button>
+            </view>
+            <view class="li">
+                <image src="http://n1.itc.cn/img8/wb/recom/2016/06/04/146504668808908497.JPEG" mode="aspectFill"></image>
+                <text>Florence</text>
+                <button bindtap="yaoyue">邀约(2人邀请)</button>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

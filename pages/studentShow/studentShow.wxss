@@ -1,0 +1,200 @@
+/* pages/coachshow/coachshow.wxss */
+.coachbanner{
+  width: 98%;
+  height: 25em;
+  margin: 0 auto;
+}
+.coachbanner image{
+  width: 100%;
+  height: 25em
+}
+
+.border-bg{
+  border-radius: 50%;
+  width: 35em;
+  height: 35em;
+  background: #2d2b27;
+  position: fixed;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%,0)
+}
+.name{
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0.75em 0;
+}
+.name text{
+  flex: 1;
+  padding:0 0.5em
+}
+.name text.name-text{
+  font-size: 1.8em;
+  font-weight: bold
+}
+.name text.year{
+  text-align: right;
+  padding-top: 0.75em;
+  color: #b0b0b0;
+  font-weight: 200
+}
+.coachCon{
+  background: #fff;
+  position: relative;
+  z-index: 99999
+}
+
+.coachInfo{
+  display: flex;
+}
+.coachInfo .ul{
+  flex: 1;
+  padding: 0.75em 0 0.75em 0.75em;
+  border-right: 1px solid #ddd;
+  font-weight: 200;
+  font-size: 0.95em;
+  border-bottom: 1px solid #e0e0e0;
+}
+.coachInfo .ul .li{
+  margin: 0.75em 0;
+}
+.content{
+  position: relative;
+  z-index: 3
+}
+
+
+
+.content{
+  padding-bottom: 3em
+}
+.his-title{
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.5em 0
+}
+
+.hisCon .li{
+  width: 47.8%;
+  margin: 0 0.25em;
+  display: inline-block;
+}
+.hisCon .li image{
+  width: 100%;
+  height: 11em;
+}
+
+.hisContitle{
+  padding: 0.5em 0
+}
+.hisContitle h3{
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.hisContitle .p{
+  font-size: 0.9em;
+  font-weight: 200;
+}
+
+.Become{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}
+.Become button{
+  padding: 0.75em;
+  text-align: center;
+  display: block;
+  color: #fff;
+  flex: 1;
+  border-radius:0;
+}
+.Become button:active{
+  background: #000
+}
+
+.Become button.buy{
+  background: #c00000;
+  color: #fff;
+}
+.Become button.baishibtn{
+  background: #000;
+}
+
+
+.gift {
+  padding: 0.5em;
+  background: #f5f5f5;
+}
+.gift .giftp-title{
+  padding-bottom: 0.35em;
+  margin-bottom: 0.35em;
+  border-bottom:1px solid #eee;
+  font-weight: 300
+}
+.gift .ul{
+  display: flex;
+}
+.gift .ul .li{
+  flex: 1;
+  text-align: center
+}
+.gift .ul .li text{
+  display: block;
+  font-size: 0.8em;
+  font-weight: 200;
+}
+.gift .ul .li image{
+  width: 2em;
+  height: 2em
+}
+
+
+.hisactivity{
+  background: #f5f5f5;
+}
+.hisactivity_title{
+  display: flex;
+  border-bottom: 1px solid #eee;
+  font-weight: 200
+}
+.hisactivity_title .text{
+  flex: 1;
+  padding: 0.5em
+}
+.hisactivity_title .text.right{
+  text-align: right;
+}
+
+.hisactivityCon{
+  font-size: 0.8em;
+  font-weight: 200;
+  padding: 0.5em;
+  margin-bottom: 0.5em
+}
+.hisactivityCon .p{
+  margin-bottom: 0.75em
+}
+.hisactivityCon .img image{
+  width: 100%;
+  height: 10em;
+}
+.hisactivityCon .img  {
+  display: flex;
+}
+
+.hisactivityCon .img .imgList-li{
+  flex: 1;
+  margin: 0 0.2em
+}
+
+
+.coachInfo .li-item{
+  display: flex;
+  align-items:center;
+}
+.coachInfo .li-item .text{
+  flex: 1
+}

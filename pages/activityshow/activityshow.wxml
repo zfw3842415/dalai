@@ -1,0 +1,51 @@
+<!--pages/activityshow/activityshow.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+    <view class="ashow_content">
+        <view class="as_content">
+                <view class="h3">周末练球日</view>
+                <view class="date">2019-12-03 15：23</view>
+                <view class="p">活动时间：2019-12-07(周六)至2019-12-08(周日)</view>
+                <view class="p">活动地点：贵州省贵阳市高尔夫球场</view>
+                <view class="p">活动介绍：运动随心不止步，挥杆击传统，姿势更潇洒。自由挥洒，转动生命之美。</view>
+                <image src="../images/other/ap_s01.jpg"  mode='aspectFill'></image>
+                <image src="../images/other/ap_s02.jpg"  mode='aspectFill'></image>
+                <image src="../images/other/ap_s03.jpg"  mode='aspectFill'></image>
+        </view>
+
+        <view class="btn">
+            <button>申请参与</button>
+        </view>
+    </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+<!--pages/master/master.wxml-->
+<!-- <view class="border-bg"></view> -->
+<view class="content">
+  <view class="masterContent">
+    <view class="ul">
+      <block wx:for="{{rookieList}}">
+        <view class="li">
+          <navigator url="../studentShow/studentShow?id={{item.id}}">
+            <image src="{{item.avatarUrl}}" mode='aspectFill'></image>
+            <view class="text">
+              <view class="h3">{{item.weixinNickName}}</view>
+              <view class="p">球龄：{{item.year}}年</view>
+              <view class="">{{item.moment}}</view>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

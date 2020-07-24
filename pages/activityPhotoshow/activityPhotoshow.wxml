@@ -1,0 +1,27 @@
+<!--pages/activityPhotoshow/activityPhotoshow.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+    <view class="ap-show">
+        <view class="ap-showCon">
+          <view class="h3">高尔夫球周末训练</view>
+          <view class="p">时间：2019-10-26</view>
+          <view class="p">地点：贵阳市高尔夫球训练场</view>
+          <view class="p">主办人：一杆更比一杆强</view>
+        </view>  
+        <view class="ap-showImg">
+          <view class='imgList-li' wx:for='{{imgArr}}'>
+            <image class='img' mode='aspectFill' src='{{item}}' data-index='{{index}}' bindtap='previewImg'></image>
+          </view>
+        </view> 
+    </view>
+</view>
+
+
+
+
+
+
+
+
+
+

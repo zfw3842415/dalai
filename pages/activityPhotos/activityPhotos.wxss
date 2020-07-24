@@ -1,0 +1,56 @@
+/* pages/activityPhotos/activityPhotos.wxss */
+.content{
+  position: relative;
+  margin: 0.35em
+}
+.hisactivity{
+  
+}
+.hisactivity_title{
+  display: flex;
+  border-bottom: 1px solid #eee;
+  font-weight: 200
+}
+.hisactivity_title .text{
+  flex: 1;
+  padding: 0.5em
+}
+.hisactivity_title .text.right{
+  text-align: right;
+}
+
+.hisactivityCon{
+  font-size: 0.8em;
+  font-weight: 200;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  background: #fff;
+  box-shadow: 0 0 0.8em rgba(0,0,0,0.35)
+}
+.hisactivityCon .img{
+  margin:0.3em 0
+}
+.hisactivityCon .img image{
+  width: 100%;
+  height: 10em;
+}
+.hisactivityCon .img  {
+  display: flex;
+}
+
+.hisactivityCon .img .imgList-li{
+  flex: 1;
+  margin: 0 0.2em
+}
+
+.time{
+  display: flex;
+}
+.time .text{
+  flex: 1;
+}
+.time .text.details{
+  text-align: right
+}
+
+

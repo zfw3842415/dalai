@@ -1,0 +1,116 @@
+/* pages/news/news.wxss */
+.newsContent{
+  background: #fff;
+  margin: 0.5em;
+  padding-bottom: 1em;
+}
+.newsContent .ul .li{
+  border-bottom: 1px solid #eee;
+}
+.newsContent .ul .li image{
+  width: 2em;
+  height: 2em;
+  margin-top: 0.45em
+}
+.newsContent .ul .li .ico{
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background: #457ce0;
+  text-align: center;
+  position: relative
+}
+.newsContent .ul .li.baishi .ico{
+  background: #54bb90
+}
+.newsContent .ul .li.zhaotu .ico{
+  background: #927bd6
+}
+.newsContent .ul .li.zan .ico{
+  background: #fec446
+}
+.newsContent .ul .li.liwu .ico{
+  background: #fd7575
+}
+.newsContent .ul .li:last-child{
+  border: 0
+}
+
+
+.newsContent .ul .li navigator{
+  padding: 1em
+}
+.newsContent .ul .li .item{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.newsContent .ul .li .item.text{
+  width: 60%;
+  padding: 0 0.75em;
+}
+.newsContent .ul .li .item.text .h3{
+  font-size: 1.1em
+}
+.newsContent .ul .li .item.text .p{
+  font-size: 0.85em;
+  color: #a1a1a1;
+  margin-top: 0.75em
+}
+.newsContent .ul .li .item.time{
+  font-size: 0.85em;
+  color: #a1a1a1;
+  width: 100%;
+  text-align: right;
+}
+
+.newsContent .ul .li .ico text{
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: #f00;
+  box-shadow: 0 0 0.75em rgba(0,0,0,.2);
+  position: absolute;
+  font-size: 0.85em;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5em;
+  top: -0.2em;
+  right: -0.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

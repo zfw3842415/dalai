@@ -1,0 +1,37 @@
+<!--pages/cash/cash.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+    <view class="cashContent">
+        <view class="cashTitle">
+            <navigator url="../card/card">
+                <image class="flex" src="../images/ico/logo.jpg" mode='aspectFill'></image>
+                <text class="flex flex2">5200 xxxx xxxx 5412</text>
+                <text class="flex alignright">修改</text>
+            </navigator>
+        </view>
+
+        <view class="cashCon">
+            <view class="h3">提现金额</view>
+            <view class="cashInput">
+                <text>￥</text>
+                <input type="number" placeholder="00.00" placeholder-style="color:#df4052"></input>
+            </view>
+            <view class="tx">
+                <text>账户余额：￥1314.520</text>
+                <text class="alignright">全额提现</text>
+            </view>
+        </view>
+
+
+
+
+        <view class="fixed">
+            <view class="p">温馨提示：您提现的现金将于3-5个工作日到达您的银行账户</view>
+            <button>提现</button>
+        </view>
+
+
+
+
+    </view>
+</view>

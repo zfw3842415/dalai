@@ -1,0 +1,140 @@
+<!--pages/search/search.wxml-->
+<block wx:if="{{result==0}}">
+  <view class="search">
+    <input type="text" placeholder="{{placeholoder}}" data-type="{{type}}" placeholder-style="color:#ccc" bindconfirm="searchSumbit"></input>
+    <view class="p">搜索指定内容</view>
+
+    <view class="ul">
+      <view class="li">
+        <text bindtap="textclick">{{text01}}</text>
+      </view>
+      <view class="li">
+        <text bindtap="textclick02">{{text02}}</text>
+      </view>
+      <view class="li">
+        <text bindtap="textclick03">{{text03}}</text>
+      </view>
+    </view>
+  </view>
+</block>
+
+
+
+<view class="guess">
+    <!-- <view class="guess-title">
+        <text>猜你喜欢</text>
+    </view> -->
+
+    <view class="guessContent">
+        <view class="ul">
+            <view class="li">
+                <navigator url="../studentShow/studentShow">
+                    <view class="liTitle">
+                        <view class="pic">
+                            <image src="../images/other/2.jpg" mode="aspectFill"></image>
+                        </view>
+                        <view class="textname">午后凌风</view>
+                    </view>
+                    <view class="guessimg">
+                        <image src="../images/other/2.jpg" mode="aspectFill"></image>
+                        <image src="../images/other/3.png" mode="aspectFill"></image>
+                        <image src="../images/other/2.jpg" mode="aspectFill"></image>
+                    </view>
+                </navigator>
+            </view>
+            <view class="li">
+                <navigator url="../studentShow/studentShow">
+                    <view class="liTitle">
+                        <view class="pic">
+                            <image src="../images/other/2.jpg" mode="aspectFill"></image>
+                        </view>
+                        <view class="textname">午后凌风</view>
+                    </view>
+                    <view class="guessimg">
+                        <image src="../images/other/2.jpg" mode="aspectFill"></image>
+                        <image src="../images/other/3.png" mode="aspectFill"></image>
+                        <image src="../images/other/2.jpg" mode="aspectFill"></image>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<block wx:if="{{result==1&&memberType==0}}">
+  <block wx:for="{{resultInfo}}">
+    <view class='swiper_con content-view'>
+      <view class="swiperCon-title">
+        <navigator url='../TeacherShow/TeacherShow?id={{item.id}}'>
+          <view class="head_pic">
+            <image src="{{item.avatarUrl}}"></image>
+          </view>
+          <view class="info">
+            <view class="name">{{item.weixinNickName}}</view>
+            <view class="other_info">
+              <text class="flex-left">球龄：{{item.year}}</text>
+              <text class="flex-right">职业：{{item.profession}}</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </block>
+</block>
+<block wx:if="{{result==1&&memberType==1}}">
+  <block wx:for="{{resultInfo}}">
+    <view class='swiper_con content-view'>
+      <view class="swiperCon-title">
+        <navigator url='../studentShow/studentShow?id={{item.id}}'>
+          <view class="head_pic">
+            <image src="{{item.avatarUrl}}"></image>
+          </view>
+          <view class="info">
+            <view class="name">{{item.weixinNickName}}</view>
+            <view class="other_info">
+              <text class="flex-left">球龄：{{item.year}}</text>
+              <text class="flex-right">职业：{{item.profession}}</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </block>
+</block>
+<block wx:if="{{result==2}}">
+  <view class="activityContent">
+    <view class="ul">
+      <block wx:for="{{resultInfo}}">
+        <view class="li">
+          <view class="liCon">
+            <view class="item a_content">
+              <view class="p">{{item.activityName}}</view>
+              <view class="span">活动日期：{{item.activityStartTime}}</view>
+              <view class="span">活动地址：{{item.activityPos}}</view>
+              <view class="span">活动费用：{{item.activityDeposit}}</view>
+              <view class="span">活动简介：{{item.activityInfo}}</view>
+            </view>
+          </view>
+          <button bindtap="yajin">参与活动</button>
+        </view>
+      </block>
+    </view>
+  </view>
+</block>
+

@@ -1,0 +1,83 @@
+<!--pages/gift/gift.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+    <view class="giftCon">
+        <view class="ul">
+            <view class="li">
+                <image src="../images/ico/gift/gaoerfuqiu.png" mode="aspectFill"></image>
+                <text>高尔夫球杆</text>
+                <text>3800</text>
+            </view>
+            <view class="li">
+                <image src="../images/ico/gift/gaoerfu.png" mode="aspectFill"></image>
+                <text>高尔夫球</text>
+                <text>3800</text>
+            </view>
+            <view class="li">
+                <image src="../images/ico/gift/bangqiumao.png" mode="aspectFill"></image>
+                <text>球帽</text>
+                <text>3800</text>
+            </view>
+            <view class="li">
+                <image src="../images/ico/gift/qiuyi.png" mode="aspectFill"></image>
+                <text>球衣</text>
+                <text>3800</text>
+            </view>
+            <view class="li">
+                <image src="../images/ico/gift/huaduo.png" mode="aspectFill"></image>
+                <text>花</text>
+                <text>3800</text>
+            </view>
+            <view class="li">
+                <image src="../images/ico/gift/zan.png" mode="aspectFill"></image>
+                <text>赞</text>
+                <text>3800</text>
+            </view>
+        </view>
+
+        <!-- 排行榜 -->
+        <view class="Ranking">
+            <view class="title">排行榜</view>
+            <view class="ul">
+                <view class="li">
+                    <text class="num first">1</text>
+                    <text class="text">一杆更比一杆强</text>
+                    <text class="gift-num">7,623,000</text>
+                </view>
+                <view class="li">
+                    <text class="num second">2</text>
+                    <text class="text">一杆入魂</text>
+                    <text class="gift-num">7,623,000</text>
+                </view>
+                <view class="li">
+                    <text class="num Third">3</text>
+                    <text class="text">二杆涅槃</text>
+                    <text class="gift-num">7,623,000</text>
+                </view>
+                <view class="li">
+                    <text class="num">4</text>
+                    <text class="text">三杆灰飞烟灭</text>
+                    <text class="gift-num">7,623,000</text>
+                </view>
+                <view class="li">
+                    <text class="num">5</text>
+                    <text class="text">四杆地狱相见</text>
+                    <text class="gift-num">7,623,000</text>
+                </view>
+                <view class="li">
+                    <text class="num">6</text>
+                    <text class="text">五杆相依为伴</text>
+                    <text class="gift-num">7,623,000</text>
+                </view>
+            </view>
+        </view>
+
+
+
+    </view>
+</view>
+
+
+
+
+

@@ -1,0 +1,33 @@
+<!--pages/Release/Release.wxml-->
+
+<view class="border-bg"></view>
+
+<view class="content">
+
+  <view class="release">
+    <form bindsubmit="formSubmit">
+      <view class="li">
+        <textarea style="left:{{left}}" name="content" placeholder="请输入藏家心得（5-120个字符）"></textarea>
+        <!-- <textarea wx:if="{{focusModel}}"></textarea> -->
+      </view>
+      <view class="question-images-area">
+        <!-- 添加图片按钮  -->
+        <view class="question-images-tool">
+          <button  bindtap="chooseImage" wx:if="{{images.length < 6}}">添加图片</button>
+        </view>
+
+        <!-- 图片缩略图  -->
+        <view class="question-images">
+          <block wx:for="{{images}}" wx:key="*this">
+            <view class="q-image-wrap">
+              <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+              <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">删除</view>
+            </view>
+          </block>
+        </view>
+      </view>
+      <!-- 提交表单按钮  -->
+      <button class="weui-btn"  formType="submit">确定发布</button>
+    </form>
+  </view>
+</view>

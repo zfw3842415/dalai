@@ -1,0 +1,20 @@
+<!--pages/contact/contact.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+    <view class="newshow">
+        <image src="{{userinfo.avatarUrl}}" mode="aspectFill"></image>
+        <view class="h3">{{userinfo.weixinNickName}}</view>
+
+        <view class="contact">
+            <view class="contact-item">
+                <image src="../images/ico/tel.png" mode="aspectFill"></image>
+                <text data-phone="{{userinfo.phone}}" bindtap="callPhone">{{userinfo.phone}}</text>
+            </view>
+        </view>
+    </view>
+
+</view>
+
+
+
+

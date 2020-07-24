@@ -1,0 +1,359 @@
+/* pages/Apprentice/Apprentice.wxss */
+
+.in_title {
+  display: flex;
+  width: 95%;
+  position: fixed;
+  z-index: 23;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #000;
+  padding: 0.5em 0;
+}
+
+.in_title navigator, .in_title .navigator {
+  flex: 1;
+  text-align: center;
+  margin: 0.2em;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  font-weight: 200;
+  position: relative;
+}
+
+.in_title text.num {
+  width: 1.5em;
+  height: 1.5em;
+  color: #fff;
+  background: #f00;
+  position: absolute;
+  right: 0;
+  top: -25%;
+  text-align: center;
+  line-height: 1.5em;
+  border-radius: 50%;
+  font-size: 0.8em;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  width: 95%;
+  margin: 0.35em auto;
+}
+
+.in_title {
+  width: 100%;
+}
+
+.in_title .active {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  font-weight: 400;
+}
+
+.apprenticeWrap {
+  position: relative;
+  z-index: 22;
+  width: 100%;
+  margin-top: 3.75em;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper_con {
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+  background: #fff;
+  margin: 0 auto 0.5em;
+  border-radius: 20rpx;
+}
+
+.head_pic {
+  width: 20%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.info {
+  width: 76%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.info .name {
+  font-weight: bold;
+  font-size: 50rpx;
+  color: #000;
+}
+
+.head_pic image {
+  width: 120rpx;
+  height: 120rpx;
+  display: block;
+  border-radius: 50%;
+}
+
+.other_info {
+  display: flex;
+}
+
+.other_info text {
+  flex: 1;
+  font-size: 30rpx;
+  font-weight: 100;
+}
+
+.flex-right {
+  text-align: right;
+}
+
+.swiperCon-title {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.swiperCon-title navigator {
+  padding: 20rpx;
+}
+
+.scrollY {
+  height: 100%;
+}
+
+.imgList {
+  width: 100%;
+  margin: 20rpx 0 15rpx;
+}
+
+.imgList-li {
+  width: 200rpx;
+  height: 200rpx;
+  display: inline-block;
+  margin: 0 10rpx;
+}
+
+.imgList-li image {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper_conF {
+  text-align: center;
+  padding: 5%;
+  border-top: 1px solid #e5e5e5;
+}
+
+.ico_item {
+  display: inline-block;
+  color: #363636;
+}
+
+.ico_item text {
+  font-weight: 200;
+  font-size: 1em;
+}
+
+.active {
+  color: red;
+}
+
+.other_info text.flex3 {
+  flex: 3;
+}
+
+.tab_title {
+  position: relative;
+}
+
+.man {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 0;
+  background: none;
+  color: #fff;
+  display: block;
+  padding: 0;
+  padding-right: 30rpx;
+  line-height: 40px;
+  text-align: right;
+}
+
+.fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: #000;
+  z-index: 2;
+}
+
+.swiper-tab {
+  width: 100%;
+  display: flex;
+}
+
+.about_page {
+  margin: 0 10px;
+}
+
+.swiper-tab {
+  width: 100%;
+  /* border-bottom: 2rpx solid #ccc; */
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  color: #ccc;
+  font-size: 16px;
+}
+
+.swiper-tab-item {
+  width: 30%;
+  color: #434343;
+}
+
+.active {
+  color: #f65959;
+  /* border-bottom: 4rpx solid #F65959; */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.juzhong {
+  margin: 0 auto;
+}
+
+.domain {
+  background-color: #fff;
+  height: 100%;
+  margin: 0 10px;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.Station {
+  background: #fff;
+}
+
+.Station .ul .li {
+  padding: 0.85em 0.5em;
+  border-bottom: 1px solid #eee;
+}
+
+.Station .ul .li .h3 {
+  font-size: 1em;
+  padding: 0.35em 0;
+}
+
+.Station .ul .li .p {
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+.screen {
+  margin-bottom: 0.35em;
+  font-weight: 200;
+}
+
+.clear {
+  clear: both;
+  overflow: hidden;
+}
+
+.tabTit {
+  height: 90rpx;
+  line-height: 90rpx;
+  top: 0;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+}
+
+.tabTit .active {
+  color: #e64340;
+  background: #fff;
+}
+
+.tabTit .active image {
+  transform: rotate(180deg);
+  background: none;
+}
+
+.tabTit image {
+  width: 26rpx;
+  height: 26rpx;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.tabLayer {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  top: 90rpx;
+  z-index: 1;
+  background: #fff;
+  padding-bottom: 40rpx;
+  border-bottom: solid 1px #eee;
+  text-align: center;
+}
+
+.tabLayer text {
+  width: 201rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  float: left;
+  border: solid 1px #eee;
+  margin: 20rpx 0 0 26rpx;
+  font-size: 15px;
+}
+
+.tabLayer .active {
+  color: #e64340;
+  border-color: #e64340;
+}
+
+.flex1 {
+  flex: 1;
+  overflow: hidden;
+  display: block;
+}
+
+/*弹性盒模型*/
+
+.box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.yaoyue {
+  margin-bottom: 0.75em;
+}
+
+.yaoyueCon {
+  display: flex;
+}
+
+.yaoyueCon button {
+  flex: 1;
+  margin: 0 0.2em 0.35em;
+}
+
+.load {
+  text-align: center;
+}

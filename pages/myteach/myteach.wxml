@@ -1,0 +1,54 @@
+<!--pages/myteach/myteach.wxml-->
+<view class="myteach">
+    <view class="myteachHead">
+        <image src="../images/other/coachimg1.png" mode='aspectFill'></image>
+        <view class="h3">Florence</view>
+    </view>
+    <view class="myteachCon">
+        <view class="ul">
+            <view class="li">
+                <text>性别：</text>
+                <text>男</text>
+            </view>
+            <view class="li">
+                <text>会员：</text>
+                <text>教练</text>
+            </view>
+            <view class="li">
+                <text>手机：</text>
+                <text>15185070538</text>
+            </view>
+            <view class="li">
+                <text>球龄：</text>
+                <text>10年</text>
+            </view>
+            <view class="li">
+                <text>简介：</text>
+                <text>My name is ZhangFengWen,From Guiyang, Guizhou,Is a senior programming engineer,Strong asset and family background,Love sports, especially golf, are basically one shot into a hole</text>
+            </view>
+        </view>
+    </view>
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

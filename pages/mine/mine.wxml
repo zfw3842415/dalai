@@ -1,0 +1,125 @@
+<!--pages/mine/mine.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+  <view class="header">
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <text class="userinfo-nickname">用户ID:{{openId}}</text>
+      </block>
+      <image class="vip" src="../images/ico/wan_vip.png" wx:if="{{vipCheck}}"></image>
+    </view>
+    <view class="userbtnCon">
+      <view class="userbtn">
+        <navigator class="usernew" url="../news/news">
+          <image mode="aspectFill" src="../images/ico/usernews.png"></image>
+          <text>消息<text wx:if="{{msgCount>0}}">{{msgCount}}</text></text>
+        </navigator>
+        <!-- <navigator class="yaoqing" url="../Invitation/Invitation">
+          <image mode="aspectFill" src="../images/ico/jia.png"></image>
+          <text>邀请</text>
+        </navigator> -->
+      </view>
+      <view class="user-info">
+        <!-- <view class="u-infoItem">
+          <image mode="aspectFill" src="../images/ico/jifen.png"></image>
+          <text>积分{{pointNum}}</text>
+        </view> -->
+          <!-- <view class="u-infoItem">
+           <navigator class="usernew" url="../favlist/favlist">
+            <image mode="aspectFill" src="../images/ico/zan.png"></image>
+            <text>我的收藏{{favourtieNum}}</text>
+              </navigator>
+          </view> -->
+      </view>
+    </view>
+    <view class="mineContent">
+      <view class="ul">
+        <view class="li">
+          <navigator url="../photos/photos">
+            <image mode="aspectFill" src="../images/ico/pic.png"></image>
+            <text>收藏画册</text>
+            <image mode="aspectFill" class="rightarr" src="../images/ico/arrow-right.png"></image>
+          </navigator>
+        </view>
+        <view class="li">
+          <navigator url="../myactivity/myactivity">
+            <image mode="aspectFill" src="../images/ico/huodong.png"></image>
+            <text>我的作品</text>
+            <image mode="aspectFill" class="rightarr" src="../images/ico/arrow-right.png"></image>
+          </navigator>
+        </view>
+        <!-- <view class="li" wx:if="{{type==1}}">
+          <navigator url="../masterlist/masterlist">
+            <image mode="aspectFill" src="../images/ico/teacher.png"></image>
+            <text>我的师傅</text>
+            <image mode="aspectFill" class="rightarr" src="../images/ico/arrow-right.png"></image>
+          </navigator>
+        </view> -->
+        <!-- <view class="li" wx:if="{{type==0}}">
+          <navigator url="../master/master?id={{id}}">
+            <image mode="aspectFill" src="../images/ico/xy.png"></image>
+            <text>我的学员</text>
+            <image mode="aspectFill" class="rightarr" src="../images/ico/arrow-right.png"></image>
+          </navigator>
+        </view> -->
+        <view class="li">
+          <navigator url="../info/info?type=1">
+            <image mode="aspectFill" src="../images/ico/info.png"></image>
+            <text>个人信息</text>
+            <image mode="aspectFill" class="rightarr" src="../images/ico/arrow-right.png"></image>
+          </navigator>
+        </view>
+        <!-- <view class="li">
+          <navigator url="../vip-Recharge/vip-Recharge">
+            <image mode="aspectFill" src="../images/ico/feiyong.png"></image>
+            <text>充值会员</text>
+            <image mode="aspectFill" class="rightarr" src="../images/ico/arrow-right.png"></image>
+          </navigator>
+        </view> -->
+        <!-- <view class="li">
+          <navigator url="../income/income">
+            <image mode="aspectFill" src="../images/ico/shouru.png"></image>
+            <text>我的收入</text>
+            <image mode="aspectFill" class="rightarr" src="../images/ico/arrow-right.png"></image>
+          </navigator>
+        </view> -->
+        <!-- <view class="li">
+          <navigator url="../gift/gift">
+            <image mode="aspectFill" src="../images/ico/liwu2.png"></image>
+            <text>收到的礼物</text>
+            <image mode="aspectFill" class="rightarr" src="../images/ico/arrow-right.png"></image>
+          </navigator>
+        </view> -->
+        <view class="li">
+          <navigator url="../rule/rule">
+            <image mode="aspectFill" src="../images/ico/zhidu.png"></image>
+            <text>藏家条例</text>
+            <image mode="aspectFill" class="rightarr" src="../images/ico/arrow-right.png"></image>
+          </navigator>
+        </view>
+        <!-- <view class="li">
+          <navigator>
+            <image mode="aspectFill" src="../images/ico/fankui.png"></image>
+            <text>反馈</text>
+            <image mode="aspectFill" class="rightarr" src="../images/ico/arrow-right.png"></image>
+          </navigator>
+        </view>
+        <view class="li">
+          <navigator>
+            <image mode="aspectFill" src="../images/ico/shezhi.png"></image>
+            <text>设置</text>
+            <image mode="aspectFill" class="rightarr" src="../images/ico/arrow-right.png"></image>
+          </navigator>
+        </view> -->
+      </view>
+
+    </view>
+
+
+
+
+  </view>
+</view>

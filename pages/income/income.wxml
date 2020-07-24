@@ -1,0 +1,106 @@
+<!--pages/income/income.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+    <view class="incomeContent">
+        <view class="incomeTitle">
+            <view class="span">累计分享</view>
+            <view class="h3">
+                <text>￥</text>4000
+            </view>
+            <navigator url="../cash/cash">提现</navigator>
+        </view>
+
+        <view class="time">
+            <picker mode="date" value="{{date}}" start="1978-01-01" end="9999-12-30" bindchange="bindDateChange">  
+                <view class="picker">  
+                  开始时间: {{startdates}}  
+                </view>  
+            </picker>
+            <picker class="alignright" mode="date" value="{{date}}" start="1978-01-01" end="9999-12-30" bindchange="bindDateChange2">  
+                <view class="picker">  
+                  结束时间: {{enddates}}  
+                </view>  
+            </picker>  
+        </view>
+
+
+
+
+        <view class="ul">
+            <view class="li">
+                <text class="alignleft">分享收益</text>
+                <text class="aligncenter">2019-08-22</text>
+                <text class="alignright red">+￥500.00</text>
+            </view>
+            <view class="li">
+                <text class="alignleft">分享收益</text>
+                <text class="aligncenter">2019-08-22</text>
+                <text class="alignright red">+￥500.00</text>
+            </view>
+            <view class="li">
+                <text class="alignleft">分享收益</text>
+                <text class="aligncenter">2019-08-22</text>
+                <text class="alignright red">+￥500.00</text>
+            </view>
+            <view class="li">
+                <text class="alignleft">分享收益</text>
+                <text class="aligncenter">2019-08-22</text>
+                <text class="alignright red">+￥500.00</text>
+            </view>
+            <view class="li">
+                <text class="alignleft">分享收益</text>
+                <text class="aligncenter">2019-08-22</text>
+                <text class="alignright red">+￥500.00</text>
+            </view>
+            <view class="li">
+                <text class="alignleft">分享收益</text>
+                <text class="aligncenter">2019-08-22</text>
+                <text class="alignright red">+￥500.00</text>
+            </view>
+            <view class="li">
+                <text class="alignleft">分享收益</text>
+                <text class="aligncenter">2019-08-22</text>
+                <text class="alignright red">+￥500.00</text>
+            </view>
+        </view>
+
+    </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

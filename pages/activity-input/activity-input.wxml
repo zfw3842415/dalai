@@ -1,0 +1,65 @@
+<!--pages/Release/Release.wxml-->
+
+<view class="border-bg"></view>
+<view class="content">
+  <form bindsubmit="formSubmit">
+    <view class="release">
+      <view class="li">
+        <text>作品标题：</text>
+        <input type="text" name="activityName" placeholder='请输入作品标题'></input>
+      </view>
+      <view class="li">
+        <text>作品时间：</text>
+        <view class="tui-picker-content">
+          <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+            <view class="tui-picker-detail">
+              {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}:{{dateTimeArray[5][dateTime[5]]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="li">
+        <text>作品地点：</text>
+        <input type="text" name="activityPos" placeholder='请输入作品地点'></input>
+      </view>
+
+
+      <view class="li">
+        <text>作品介绍：</text>
+        <textarea style="left:{{left}}" name="activityInfo" placeholder='请输入作品介绍'></textarea>
+        <!-- <textarea wx:if="{{focusModel}}"></textarea> -->
+      </view>
+      <view class="li">
+        <text>竞拍费用：</text>
+        <input type="num" name="activityDeposit" placeholder='请输入竞拍费用'></input>
+      </view>
+
+
+
+
+      <view class="question-images-area">
+        <!-- 添加图片按钮  -->
+        <view class="question-images-tool">
+          <button  bindtap="chooseImage" wx:if="{{images.length < 6}}">添加图片</button>
+        </view>
+
+        <!-- 图片缩略图  -->
+        <view class="question-images">
+          <block wx:for="{{images}}" wx:key="*this">
+            <view class="q-image-wrap">
+              <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+              <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">删除</view>
+            </view>
+          </block>
+        </view>
+      </view>
+
+
+
+
+
+      <!-- 提交表单按钮  -->
+      <button class="weui-btn" formType="submit">确定发布</button>
+    </view>
+  </form>
+</view>

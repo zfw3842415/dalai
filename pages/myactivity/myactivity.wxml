@@ -1,0 +1,71 @@
+<!--pages/activities/activities.wxml-->
+<!-- <view class="border-bg"></view> -->
+
+<view class="content">
+
+  <view class="in_title fixed">
+    <!-- <view class="swiper-tab">
+      <view class="navigator swiper-tab-item ">
+        <image src="../images/ico/paperplane.png" mode='aspectFill' class="{{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab"></image>
+      </view>
+      <view class="navigator swiper-tab-item ">
+        <image src="../images/ico/shouye.png" mode='aspectFill' class="{{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab"></image>
+      </view>
+    </view> -->
+  </view>
+
+  <view class="myactivityContent">
+
+    <view class="{{currentTab == 0 ? 'show':'hidden'}}">
+      <view class="activitie">
+        <view class="ul">
+          <block wx:for="{{mySendActivity}}">
+            <view class="li">
+              <view class="h3">{{item.activityName}}
+              </view>
+              <view class="p">报名时间：{{item.activityStartTime}}</view>
+              <view class="p">地点：{{item.activityPos}}</view>
+              <view class="p" wx:if="{{item.status==1}}">已审核</view>
+              <view class="p" wx:if="{{item.status==0}}">待审核</view>
+              <view class="btnCon" wx:if="{{item.status==1}}">
+                  <view class="btn active" data-id="{{item.id}}" bindtap="viewActivityList">报名列表</view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="{{currentTab == 1 ? 'show':'hidden'}}">
+      <view class="activitie">
+        <view class="ul">
+          <block wx:for="{{myJoinActivity}}">
+            <view class="li">
+              <view class="h3">{{item.activityName}}</view>
+              <view class="p">活动介绍：{{item.activityInfo}}</view>
+              <view class="p">报名时间：{{item.activityStartTime}}</view>
+              <view class="p">地点：{{item.activityPos}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+<!-- 暂无数据 -->
+<view class="nodata">
+  <view class="text">暂无作品</view>
+</view>
+
+
+
+
+
+
+
+
+
+</view>

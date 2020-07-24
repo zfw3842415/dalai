@@ -1,0 +1,72 @@
+<!--pages/card/card.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+    <view class="cardContent">
+        <view class="ts">温馨提示：您所绑定的银行卡信息将用于收益提现，请认真填写。如因信息填写错误导致经济损失自行负责，请务必认真填写。</view>
+        <view class="ul">
+            <view class="li">
+                <text class="text">银行卡号</text>
+                <input class="text" type="number" value="6217 0071 0003 4512"></input>
+            </view>
+            <view class="li">
+                <text class="text">确认银行卡号</text>
+                <input class="text" type="number" value="6217 0071 0003 4512"></input>
+            </view>
+            <view class="li">
+                <text class="text">开户银行</text>
+                <input class="text" type="text" value="中国银行"></input>
+            </view>
+            <view class="li">
+                <text class="text">持卡人姓名</text>
+                <input class="text" type="text" value="张三"></input>
+            </view>
+            <view class="li">
+                <text class="text">手机号码</text>
+                <input class="text" type="number" value="13635852154"></input>
+            </view>
+            <view class="li">
+                <text class="text">微信号</text>
+                <input class="text" type="number" value="13635852154"></input>
+            </view>
+        </view>
+
+
+
+
+        <button class="fixed">确认</button>
+    </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

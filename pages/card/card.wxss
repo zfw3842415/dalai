@@ -1,0 +1,64 @@
+/* pages/card/card.wxss */
+.cardContent{
+  background: #fff;
+  margin: 0.5em;
+}
+.ts{
+  font-size: 0.85em;
+  color: #0071bd;
+  padding: 0.5em;
+}
+.cardContent .ul .li{
+  display: flex;
+  align-items: center;
+  font-size: 0.85em;
+  border-bottom: 1px solid #eee;
+}
+.cardContent .ul .li .text{
+  flex: 1;
+  padding:0.95em 0.5em;
+}
+
+.cardContent .ul .li input{
+  padding: 0.5em 0;
+  text-align: right;
+  color: #999;
+}
+.cardContent .ul .li input.text{
+  flex: 2;
+}
+
+.fixed{
+  width: 90%;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%,0);
+  bottom: 1%;
+  background: #0071bd;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+<!--pages/newshow/newshow.wxml-->
+<view class="border-bg"></view>
+<view class="content">
+  <view class="newshow">
+    <image src="{{relationShipInfo.avatarUrl}}" mode="aspectFill"></image>
+    <view class="h3">{{relationShipInfo.weixinNickName}}</view>
+    <view class="p">{{relationShipInfo.weixinNickName}}给您发送了请求,希望能和您一起打球</view>
+    <view class="btn" wx:if="{{status==1}}">
+      <view class="p" bindtap="viewInfo" data-id="{{rid}}">已同意,查看电话</view>
+    </view>
+    <view class="btn" wx:if="{{status==2}}">
+      <view class="p">已拒绝</view>
+    </view>
+    <view class="btn" wx:if="{{status==3}}">
+      <view class="p">已忽略</view>
+    </view>
+    <view class="btn" wx:if="{{status==0}}">
+      <button class="btn-item yes" data-type='1' bindtap="buttonInfo">同意</button>
+      <button class="btn-item" data-type='2' bindtap="buttonInfo">忽略</button>
+      <button class="btn-item" data-type='3' bindtap="buttonInfo">拒绝</button>
+    </view>
+
+  </view>
+
+</view>
