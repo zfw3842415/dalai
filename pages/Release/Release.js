@@ -125,13 +125,12 @@ Page({
     })
   },
   formSubmit: function (e) {
-    checkVip();
     console.log(e.detail.value.content)
     wxUlit.validation.length = 0;
     wxUlit.regexTest(/^[\u4E00-\u9FA5]{1,120}$/g, e.detail.value.content, '内容不正确');
     if (this.data.images.length == 0) {
       wx.showToast({
-        title: '请选择活动图片',
+        title: '请选择图片',
       })
       return false;
     }
@@ -143,7 +142,7 @@ Page({
     let moment_data = momentInfo.getData();
 
     getStorge({ key: 'openId' }).then(res => {
-      moment_data['openId'] = res.data.openId;
+      moment_data['openId'] = `${res.data.openId}`;
       wxRequst(
         {
           data: moment_data,

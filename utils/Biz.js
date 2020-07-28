@@ -13,6 +13,7 @@ export function checkVip() {
         wx.showModal({
           title: '请先到个人中心充值会员',
         })
+        return false;
       } else {
         return true;
       }
@@ -30,6 +31,33 @@ export function checkMemeber() {
   });
 }
 
+export function checkType(type) {
+  getStorge({ key: 'openId' }).then(res => {
+    wxRequst({
+      data: { id: res.data.openId }, url: `${apiUrl}/members/getone`
+    }).then(res => {
+      console.log(res)
+      if (res.data.type == "2") {
+        wx.showModal({
+          title: '游客不能发布',
+        })
+        return false;
+      } else {
+        if(type==0){
+          wx.navigateTo({
+            url: '/pages/Release/Release',
+          })
+        }else{
+          wx.navigateTo({
+            url: '/pages/activity-input/activity-input',
+          })
+        }
+       
+      }
+  }).catch(res => {
+  });
+})
+}
 export function relationShip(e) {
   let type = e.currentTarget.dataset.type;
   let relationId = e.currentTarget.dataset.rid

@@ -24,41 +24,6 @@
     <!-- <view class="guess-title">
         <text>猜你喜欢</text>
     </view> -->
-
-    <view class="guessContent">
-        <view class="ul">
-            <view class="li">
-                <navigator url="../studentShow/studentShow">
-                    <view class="liTitle">
-                        <view class="pic">
-                            <image src="../images/other/2.jpg" mode="aspectFill"></image>
-                        </view>
-                        <view class="textname">午后凌风</view>
-                    </view>
-                    <view class="guessimg">
-                        <image src="../images/other/2.jpg" mode="aspectFill"></image>
-                        <image src="../images/other/3.png" mode="aspectFill"></image>
-                        <image src="../images/other/2.jpg" mode="aspectFill"></image>
-                    </view>
-                </navigator>
-            </view>
-            <view class="li">
-                <navigator url="../studentShow/studentShow">
-                    <view class="liTitle">
-                        <view class="pic">
-                            <image src="../images/other/2.jpg" mode="aspectFill"></image>
-                        </view>
-                        <view class="textname">午后凌风</view>
-                    </view>
-                    <view class="guessimg">
-                        <image src="../images/other/2.jpg" mode="aspectFill"></image>
-                        <image src="../images/other/3.png" mode="aspectFill"></image>
-                        <image src="../images/other/2.jpg" mode="aspectFill"></image>
-                    </view>
-                </navigator>
-            </view>
-        </view>
-    </view>
 </view>
 
 

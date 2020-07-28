@@ -40,7 +40,7 @@
         <view class="li">
           <navigator url="../photos/photos">
             <image mode="aspectFill" src="../images/ico/pic.png"></image>
-            <text>收藏画册</text>
+            <text>个人画册</text>
             <image mode="aspectFill" class="rightarr" src="../images/ico/arrow-right.png"></image>
           </navigator>
         </view>

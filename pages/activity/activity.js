@@ -2,6 +2,7 @@
 import { promisify } from '../../utils/promise.util'
 import { $init, $digest } from '../../utils/common.util'
 import { apiUrl, imagesUrl } from '../../utils/config'
+import {checkType} from '../../utils/Biz'
 import { wxComUlit as wxUlit, formData as activityInfo } from '../../utils/comUit'
 const wxRequst = promisify(wx.request)
 const wxLogin = promisify(wx.login)
@@ -15,7 +16,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    activityList: []
+    activityList: [],
+    imagesUrl:imagesUrl
   },
 
   /**
@@ -78,6 +80,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  getTap(e){
+    let type = e.currentTarget.dataset.type;
+    checkType(type);
   },
   joinActivity: function (e) {
     getStorge({ key: 'openId' }).then(res => {

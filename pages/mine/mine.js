@@ -189,7 +189,7 @@ Page({
           wxStorge({ 'key': 'weixinInfo', data: weixinInfo });
           wxStorge({ 'key': 'openId', data: { openId: weixinInfo.id } });
           app.globalData.userInfo = res.data;
-          this.onLoad();
+          this.onShow();
         }
 
       }).catch(res => {

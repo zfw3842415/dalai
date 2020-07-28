@@ -48,7 +48,7 @@
         <text>站内</text>
         <text class="num" wx:if="{{msgCount>0}}">{{msgCount}}</text>
       </navigator>
-      <navigator url="../Release/Release">
+      <navigator bindtap="getRelease" data-type="0">
         <image src="../images/ico/camera.png"></image>
       </navigator>
     </view>

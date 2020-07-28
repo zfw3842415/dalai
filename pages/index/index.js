@@ -4,7 +4,7 @@ import { promisify } from '../../utils/promise.util'
 import { $init, $digest } from '../../utils/common.util'
 import { apiUrl, imagesUrl } from '../../utils/config'
 import { wxComUlit as wxUlit, formData as momentInfo } from '../../utils/comUit'
-import { checkVip, checkMemeber, relationShip, favorite } from '../../utils/Biz'
+import { checkVip, checkMemeber, relationShip, favorite,checkType } from '../../utils/Biz'
 const wxRequst = promisify(wx.request)
 const wxUploadFile = promisify(wx.uploadFile)
 const getStorge = promisify(wx.getStorage);
@@ -272,6 +272,10 @@ Page({
         url: `../studentShow/studentShow?id=${id}`,
       })
     }
+  },
+  getRelease:function(e){
+   let type = e.currentTarget.dataset.type;
+    checkType(type)
   },
   modalcnt:function(){
 		wx.showModal({

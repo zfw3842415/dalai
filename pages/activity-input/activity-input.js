@@ -9,9 +9,9 @@ const wxStorge = promisify(wx.setStorage)
 const getStorge = promisify(wx.getStorage);
 const wxPayment = promisify(wx.requestPayment);
 const app = getApp()
+const wxUploadFile = promisify(wx.uploadFile)
 Page({
   data: {
-
     images: [],
     date: '2018-10-01',
     time: '12:00',
@@ -23,6 +23,7 @@ Page({
     endYear: 2050,
     focus: false,
     focusModel: true,
+    
   },
   onLoad(options) {
     $init(this);
@@ -135,79 +136,21 @@ Page({
     })
   },
 
-  submitForm(e) {
-    const title = this.data.title
-    const content = this.data.content
+  
 
-    if (title && content) {
-      const arr = []
-
-      for (let path of this.data.images) {
-        arr.push(wxUploadFile({
-          url: config.urls.question + '/image/upload',
-          filePath: path,
-          name: 'qimg',
-        }))
-      }
-
-      wx.showLoading({
-        title: '正在创建...',
-        mask: true
-      })
-
-      Promise.all(arr).then(res => {
-        return res.map(item => JSON.parse(item.data).url)
-      }).catch(err => {
-        console.log(">>>> upload images error:", err)
-      }).then(urls => {
-        return createQuestion({
-          title: title,
-          content: content,
-          images: urls
-        })
-      }).then(res => {
-        const pages = getCurrentPages();
-        const currPage = pages[pages.length - 1];
-        const prevPage = pages[pages.length - 2];
-
-        prevPage.data.questions.unshift(res)
-        $digest(prevPage)
-
-        wx.navigateBack()
-      }).catch(err => {
-        console.log(">>>> create question error:", err)
-      }).then(() => {
-        wx.hideLoading()
-      })
-    }
-
-    wx.showModal({
-      title: '押金',
-      content: '确定发送活动信息？需支付押金￥150元',
-      success: function (res) {
-        if (res.confirm) {
-          console.log('用户点击确定')
-        } else if (res.cancel) {
-          console.log('用户点击取消')
-        }
-      }
-    })
-
-
-
-  },
+   
   formSubmit: function (e) {
     wxUlit.validation.length = 0;
-    wxUlit.regexTest(/^\S{1,25}$/g, e.detail.value.activityName, '活动名不正确');
-    wxUlit.regexTest(/^\S{2,25}$/g, e.detail.value.activityPos, '活动地点不正确');
-    wxUlit.regexTest(/^\S{2,25}$/g, e.detail.value.activityInfo, '活动介绍不正确');
-    wxUlit.regexTest(/^\d{1,}$/g, e.detail.value.activityDeposit, '活动费用不正确');
+    wxUlit.regexTest(/^\S{1,25}$/g, e.detail.value.activityName, '作品名不正确');
+    wxUlit.regexTest(/^\S{2,25}$/g, e.detail.value.activityPos, '作品地点不正确');
+    wxUlit.regexTest(/^\S{2,25}$/g, e.detail.value.activityInfo, '作品介绍不正确');
+    wxUlit.regexTest(/^\d{1,}$/g, e.detail.value.activityDeposit, '作品费用不正确');
     if (wxUlit.validation.includes(false) > 0) {
       return false;
     }
-    if (e.detail.value.activityDeposit < 100 && e.detail.value.activityDeposit != 0) {
+    if (this.data.images.length == 0) {
       wx.showToast({
-        title: '活动费用不能低于100元',
+        title: '请选择图片',
       })
       return false;
     }
@@ -217,24 +160,24 @@ Page({
     getStorge({ key: 'openId' }).then(res => {
       activity_data['memberId'] = res.data.openId;
       wxRequst({ data: activity_data, method: 'post', url: `${apiUrl}/activity` }).then(res => {
-        wxPayment({
-          'timeStamp': res.data.package.timeStamp.toString(),
-          'nonceStr': res.data.package.nonceStr,
-          'package': res.data.package.package,
-          'signType': 'MD5',
-          'paySign': res.data.package.paySign,
-        }).then(res => {
-          wx.showToast({
-            title: '等待审核..',
+        console.log(this.data.images);
+        for (let path of this.data.images) {
+          wxUploadFile({
+            url: `${apiUrl}/activityimages`,
+            filePath: path,
+            name: 'activityImage',
+            formData: {
+              activityId: res.data.id
+            }
+          }).then(res => {
+            let data = JSON.parse(res.data);
+            if (data.status == 1) {
+              wx.switchTab({
+                url: '../activity/activity'
+              })
+            }
           })
-          setTimeout(() => {
-            wx.navigateBack({
-              url: '../activity/activity'
-            })
-          }, 1000)
-        }).catch(res => {
-
-        });
+        }
       }).catch(res => { })
     }).catch();
 

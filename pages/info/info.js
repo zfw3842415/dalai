@@ -16,7 +16,7 @@ Page({
   data: {
     array: ['男', '女'],
     index: 0,
-    array2: ['艺术家', '藏家'],
+    array2: ['艺术家', '藏家','游客'],
     index2: 0,
     type: 0,
     phone: 0,
@@ -199,13 +199,13 @@ Page({
   },
   formSubmit: function (e) {
     wxUlit.validation.length = 0;
-    wxUlit.regexTest(/^\d{1,2}$/g, +e.detail.value.year, '请填写正确球龄');
-    wxUlit.regexTest(/^\S{1,25}$/g, e.detail.value.moment, '签名格式不正确');
-    wxUlit.regexTest(/^\S{2,25}$/g, e.detail.value.profession, '职业不正确');
-    wxUlit.regexTest(/^\S{2,25}$/g, e.detail.value.expert, '擅长不正确');
-    wxUlit.regexTest(/^\d{1,2}$/g, +e.detail.value.bestResult, '请填写正确球龄');
-    wxUlit.regexTest(/^\S{2,25}$/g, e.detail.value.favourite, '爱好不正确');
-    wxUlit.regexTest(/^\S{2,25}$/g, e.detail.value.meno, '介绍不正确');
+    // wxUlit.regexTest(/^\d{1,2}$/g, +e.detail.value.year, '请填写正确球龄');
+    // wxUlit.regexTest(/^\S{1,25}$/g, e.detail.value.moment, '签名格式不正确');
+    // wxUlit.regexTest(/^\S{2,25}$/g, e.detail.value.profession, '职业不正确');
+    // wxUlit.regexTest(/^\S{2,25}$/g, e.detail.value.expert, '擅长不正确');
+    // wxUlit.regexTest(/^\d{1,2}$/g, +e.detail.value.bestResult, '请填写正确球龄');
+    // wxUlit.regexTest(/^\S{2,25}$/g, e.detail.value.favourite, '爱好不正确');
+     wxUlit.regexTest(/^\S{2,25}$/g, e.detail.value.meno, '介绍不正确');
     if (this.data.phone == 0 && this.data.type!=1) {
       wx.showToast({
         title: '请获取手机号',

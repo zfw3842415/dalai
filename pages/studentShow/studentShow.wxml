@@ -61,9 +61,9 @@
             <button>邀请(2人邀请)</button>
           </view> -->
         </view>
-        <view class="li">藏家身份：{{userinfo.profession}}</view>
+        <!-- <view class="li">藏家身份：{{userinfo.profession}}</view>
         <view class="li">收藏爱好：{{userinfo.favourite}}</view>
-        <view class="li">主要收藏：{{userinfo.expert}}</view>
+        <view class="li">主要收藏：{{userinfo.expert}}</view> -->
          <!-- <view class="li">其他球类：{{userinfo.ball}}</view> -->
         <block wx:if="{{userinfo.phone.length>0}}">
           <view class="li">电话:{{userinfo.phone}}
