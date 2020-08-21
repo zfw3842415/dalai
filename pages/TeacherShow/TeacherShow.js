@@ -2,7 +2,7 @@
 import { promisify } from '../../utils/promise.util'
 import { $init, $digest } from '../../utils/common.util'
 import { apiUrl, imagesUrl } from '../../utils/config'
-import { checkVip, checkMemeber, relationShip, favorite } from '../../utils/Biz'
+import { checkVip, checkMemeber, relationShip, favorite,getFavoriteSetting } from '../../utils/Biz'
 import { wxComUlit as wxUlit, formData as momentInfo } from '../../utils/comUit'
 const wxRequst = promisify(wx.request)
 const wxUploadFile = promisify(wx.uploadFile)
@@ -20,7 +20,8 @@ Page({
     imgArr: [],
     rookieList: [],
     imagesUrl: imagesUrl,
-    relationshop:0
+    relationshop:0,
+    cost:''
   },
   previewImg: function (e) {
     let that = this;
@@ -65,6 +66,7 @@ Page({
             res => {
             });
       }).catch();
+      getFavoriteSetting(this)
 
   },
 
@@ -146,4 +148,32 @@ Page({
     checkVip();
     relationShip(e);
   },
+  modalcnt:function(){
+		wx.showModal({
+      title: '提示',
+			content: '感谢您对大来艺术博物馆的支持，为了您的资金安全，请联系大来博物馆官方热线400-88888888进行购买',
+			success: function(res) {
+				if (res.confirm) {
+				console.log('用户点击确定')
+				} else if (res.cancel) {
+				console.log('用户点击取消')
+				}
+			}
+		})
+  },
+  momentFavourite:function(e){
+
+    let cost = e.currentTarget.dataset.price;
+		wx.showModal({
+      title: `点赞金￥${cost}`,
+			content: '对作品点赞，未来购买作品享受9.5折优惠，并抵扣画价。',
+			success: function(res) {
+				if (res.confirm) {
+          favorite(e, this)
+				} else if (res.cancel) {
+				console.log('用户点击取消')
+				}
+			}
+		})
+	}
 })

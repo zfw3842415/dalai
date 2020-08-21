@@ -104,7 +104,7 @@
     <block wx:if="{{relationshop==0}}">
       <view class="Become">
         <button class="buy" bindtap="modalcnt">购买</button>
-        <button class="baishibtn" bindtap="buy" data-type="1" data-rid="{{userinfo.id}}">点赞</button>
+        <button class="baishibtn" bindtap="momentFavourite" data-type="1" data-price="{{cost}}" data-rid="{{userinfo.id}}">点赞</button>
       </view>
     </block>
   </view>

@@ -121,49 +121,50 @@ Page({
     getStorge({ key: 'openId' }).then(
       res => {
         this.data.openId = res.data.openId;
-        wxRequst(
-          {
-            data: null,
-            url: `${apiUrl}/members/${res.data
-              .openId}`
-          }
-        ).then(
-          res => {
-            console.log(res);
-            this.data.type = res.data.type;
-            this.data.id = res.data.id;
-            wxRequst(
-              {
-                data: { id: this.data.openId },
-                url: `${apiUrl}/favorites/getinfo`
-              }
-            ).then(res => {
-              console.log(res)
-              this.data.favourtieNum = res.data.total
-              wxRequst({
-
-                data: { id: this.data.openId },
-                url: `${apiUrl}/message/getmsg`
-              }
+        if(typeof res.data.openId !='undefined'){
+          wxRequst(
+            {
+              data: null,
+              url: `${apiUrl}/members/${res.data
+                .openId}`
+            }
+          ).then(
+            res => {
+              console.log(res);
+              this.data.type = res.data.type;
+              this.data.id = res.data.id;
+              wxRequst(
+                {
+                  data: { id: this.data.openId },
+                  url: `${apiUrl}/favorites/getinfo`
+                }
               ).then(res => {
-                let count = 0;
-                count = res.data.count;
-                getStorge({ key: 'myMsgCount' }).then(res => {
-                  if (count > res.data.count) {
-                    this.data.msgCount = count;
-                  } else {
-                    this.data.msgCount = 0;
-                  }
-                }).catch();
-                wxStorge({ 'key': 'myMsgCount', data: this.data.msgCount });
-                $digest(this);
-              }
-              ).catch();
-
-            }).catch(res => { })
-          }
-        ).catch(res => {
-        });
+                console.log(res)
+                this.data.favourtieNum = res.data.total
+                wxRequst({
+                  data: { id: this.data.openId },
+                  url: `${apiUrl}/message/getmsg`
+                }
+                ).then(res => {
+                  let count = 0;
+                  count = res.data.count;
+                  getStorge({ key: 'myMsgCount' }).then(res => {
+                    if (count > res.data.count) {
+                      this.data.msgCount = count;
+                    } else {
+                      this.data.msgCount = 0;
+                    }
+                  }).catch();
+                  wxStorge({ 'key': 'myMsgCount', data: this.data.msgCount });
+                  $digest(this);
+                }
+                ).catch();
+  
+              }).catch(res => { })
+            }
+          ).catch(res => {
+          });
+        }
       }).catch(res => { })
   },
   getUserInfo: function (e) {

@@ -59,9 +59,9 @@
               <button class="yaoyue"  bindtap="getRelation" data-type="2" data-rid="{{item.id}}" data-index="{{idx}}" data-type="{{item.type}}">拜师</button>
             </view> -->
             <view class="swiper_conF">
-              <view class="ico_item {{item.activeFoucs==1? 'active':''}}" data-index="{{idx}}" data-rid="{{item.id}}" bindtap="coachLike">
+              <view class="ico_item {{item.activeFoucs==1? 'active':''}}" data-index="{{idx}}" data-rid="{{item.id}}" data-index="{{idx}}" data-type="{{item.type}}" bindtap="modalcnt">
                 <view class="iconfont icon-z-like "></view>
-                <text>打赏</text>
+                <text>购买</text>
               </view>
             </view>
           </view>

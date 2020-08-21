@@ -3,9 +3,16 @@ App({
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
+     wx.getStorage({
+       key: 'openId',
+       success:function(res){
+        if(typeof res.data.openId !="undefined"){
+          wx.switchTab({
+            url: '/pages/index/index',
+          })
+        }
+       }
+     })
     // 登录
     wx.login({
       success: res => {
@@ -33,7 +40,13 @@ App({
       }
     })
   },
+  onError(e) {
+    const logManager = wx.getLogManager(0);
+    logManager.log(e);
+    console.log(logManager);
+  },
   globalData: {
     userInfo: null
-  }
+  },
+  
 })

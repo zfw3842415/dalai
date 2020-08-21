@@ -1,0 +1,16 @@
+<view class="img">
+    <image src="/pages/images/other/home1.jpg" mode="aspectFill"></image>
+</view>
+<view class="homelist">
+    <text>1、线上艺术博物馆</text>
+    <text>2、为喜爱的作品点赞</text>
+    <text>3、藏家发布心爱藏品</text>
+    <text>4、线上展览线下交易</text>
+</view>
+<view class="btn" bindtap="goIndex">
+    <text>立即体验</text>
+</view>
+
+<view class="p">此功能会获取用户信息，平台承诺不会将用户信息透露给第三方</view>
+
+

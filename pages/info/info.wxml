@@ -70,4 +70,6 @@
       <button class="suc" formType="submit" style="margin-top:1em">保存</button>
     </form>
   </view>
+    <view class="qus">是否遇到问题？</view>
+  <button open-type="feedback">点击反馈</button>
 </view>

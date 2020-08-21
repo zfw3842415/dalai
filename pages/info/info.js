@@ -16,7 +16,7 @@ Page({
   data: {
     array: ['男', '女'],
     index: 0,
-    array2: ['艺术家', '藏家','游客'],
+    array2: ['艺术家', '藏家', '游客'],
     index2: 0,
     type: 0,
     phone: 0,
@@ -60,17 +60,17 @@ Page({
           wxRequst({ data: null, method: 'GET', url: `${apiUrl}/balls` }).then(res => {
             this.data.ballList = res.data;
             console.log(res);
-            for(let key in arr){
-              for(let keyOne in this.data.ballList){
-                if(this.data.ballList[keyOne].ball ==arr[key]){
-                  this.data.ballList[keyOne]['checked'] ='true';
+            for (let key in arr) {
+              for (let keyOne in this.data.ballList) {
+                if (this.data.ballList[keyOne].ball == arr[key]) {
+                  this.data.ballList[keyOne]['checked'] = 'true';
                 }
               }
             }
             $digest(this);
           }).catch(res => {
 
-          }); 
+          });
           $digest(this);
         }).catch(res => {
 
@@ -166,8 +166,8 @@ Page({
   checkboxChange: function (e) {
     console.log(e);
     if (e.detail.value.length > 2) {
-      let arr =[];
-      for (let keyOne in this.data.ballList){
+      let arr = [];
+      for (let keyOne in this.data.ballList) {
         this.data.ballList[keyOne]['checked'] = null;
       }
       for (let key in e.detail.value) {
@@ -176,13 +176,13 @@ Page({
             console.log(this.data.ballList[keyOne])
             console.log(e.detail.value[key])
             if (this.data.ballList[keyOne].ball == e.detail.value[key]) {
-            arr.push(this.data.ballList[keyOne].ball);
+              arr.push(this.data.ballList[keyOne].ball);
               this.data.ballList[keyOne]['checked'] = 'true';
             }
           }
         }
       }
-      this.data.ball =arr;
+      this.data.ball = arr;
       console.log(this.data.ball);
       $digest(this);
       wx.showToast({
@@ -205,8 +205,8 @@ Page({
     // wxUlit.regexTest(/^\S{2,25}$/g, e.detail.value.expert, '擅长不正确');
     // wxUlit.regexTest(/^\d{1,2}$/g, +e.detail.value.bestResult, '请填写正确球龄');
     // wxUlit.regexTest(/^\S{2,25}$/g, e.detail.value.favourite, '爱好不正确');
-     wxUlit.regexTest(/^\S{2,25}$/g, e.detail.value.meno, '介绍不正确');
-    if (this.data.phone == 0 && this.data.type!=1) {
+    wxUlit.regexTest(/^\S{1,25}$/g, e.detail.value.meno, '介绍不正确');
+    if (this.data.phone == 0 && this.data.type != 1) {
       wx.showToast({
         title: '请获取手机号',
       })
@@ -220,7 +220,6 @@ Page({
     user_data['sex'] = this.data.index;
     user_data['type'] = this.data.index2;
     user_data['phone'] = this.data.phone;
-    user_data['ball']=this.data.ball.toString();
     getStorge({ key: 'weixinInfo' }).then(res => {
       user_data['openId'] = res.data.openId;
       user_data['avatarUrl'] = res.data.avatarUrl;
@@ -250,9 +249,13 @@ Page({
           });
         }
       }).catch(
-        wx.showToast({
-          title: '修改成功',
-        })
+        res => {
+          app.onError(res);
+          console.log(res)
+          wx.showToast({
+            title: '提交失败',
+          })
+        }
       );
     }).catch(res => {
 

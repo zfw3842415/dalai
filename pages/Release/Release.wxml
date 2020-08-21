@@ -7,7 +7,7 @@
   <view class="release">
     <form bindsubmit="formSubmit">
       <view class="li">
-        <textarea style="left:{{left}}" name="content" placeholder="请输入藏家心得（5-120个字符）"></textarea>
+        <textarea style="left:{{left}}" name="content" placeholder="请输入艺术心得（5-120个字符）"></textarea>
         <!-- <textarea wx:if="{{focusModel}}"></textarea> -->
       </view>
       <view class="question-images-area">

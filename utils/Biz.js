@@ -4,6 +4,24 @@ import { $init, $digest } from 'common.util'
 const getStorge = promisify(wx.getStorage);
 const wxRequst = promisify(wx.request)
 const wxPayment = promisify(wx.requestPayment);
+let member ={status:false}
+function Memeber() {
+  getStorge({ key: 'openId' }).then(res => {
+    if(res.data.openId.length==0){
+      wx.showModal({
+        title: '请先到个人中心授权获取微信信息',
+      })
+     member.status = false;
+    }else{
+      member.status =true;
+    }
+  }).catch(res => {
+    wx.showModal({
+      title: '请先到个人中心授权获取微信信息',
+    })
+    return false;
+})
+}
 export function checkVip() {
   getStorge({ key: 'openId' }).then(res => {
     wxRequst({
@@ -22,41 +40,57 @@ export function checkVip() {
 }
 
 export function checkMemeber() {
+  
   getStorge({ key: 'openId' }).then(res => {
-    return true;
+    if(res.data.openId.length==0){
+      wx.showModal({
+        title: '请先到个人中心授权获取微信信息',
+      })
+      return false;
+    }else{
+      return true;
+    }
   }).catch(res => {
     wx.showModal({
       title: '请先到个人中心授权获取微信信息',
     })
-  });
+    return false;
+})
 }
 
 export function checkType(type) {
-  getStorge({ key: 'openId' }).then(res => {
-    wxRequst({
-      data: { id: res.data.openId }, url: `${apiUrl}/members/getone`
-    }).then(res => {
-      console.log(res)
-      if (res.data.type == "2") {
+    getStorge({ key: 'openId' }).then(res => {
+      if(res.data.openId.length==0){
         wx.showModal({
-          title: '游客不能发布',
+          title: '请先到个人中心授权获取微信信息',
         })
-        return false;
-      } else {
-        if(type==0){
-          wx.navigateTo({
-            url: '/pages/Release/Release',
-          })
-        }else{
-          wx.navigateTo({
-            url: '/pages/activity-input/activity-input',
-          })
-        }
-       
+      }else{
+        wxRequst({
+          data: { id: res.data.openId }, url: `${apiUrl}/members/getone`
+        }).then(res => {
+          console.log(res)
+          if (res.data.type == "2") {
+            wx.showModal({
+              title: '游客不能发布',
+            })
+            return false;
+          } else {
+            if(type==0){
+              wx.navigateTo({
+                url: '/pages/Release/Release',
+              })
+            }else{
+              wx.navigateTo({
+                url: '/pages/activity-input/activity-input',
+              })
+            }
+          }
+      }).catch(res => {
+      });
       }
-  }).catch(res => {
-  });
-})
+  })
+
+  
 }
 export function relationShip(e) {
   let type = e.currentTarget.dataset.type;
@@ -99,7 +133,16 @@ export function relationShip(e) {
     })
   }).catch(res => { });
 }
-
+export function getFavoriteSetting($this){
+  wxRequst({
+    method: 'get',
+    url: `${apiUrl}/cost`
+  }).then(res => {
+    console.log(res);
+     $this.data.cost = res.data[0].Price
+     $digest($this)
+  })
+}
 export function favorite(e, page) {
   let favoriteId = e.currentTarget.dataset.rid
   getStorge({ key: 'openId' }).then(res => {
@@ -119,9 +162,6 @@ export function favorite(e, page) {
       method: 'post',
       url: `${apiUrl}/favorites`
     }).then(res => {
-      if (res.data.status == 1) {
-        $digest(page);
-      } else {
         wxPayment({
           'timeStamp': res.data.package.timeStamp.toString(),
           'nonceStr': res.data.package.nonceStr,
@@ -129,10 +169,11 @@ export function favorite(e, page) {
           'signType': 'MD5',
           'paySign': res.data.package.paySign,
         }).then(res => {
-          $digest(page);
+          wx.showToast({
+            title: '点赞成功',
+          })
         }).catch(res => {
         });
-      }
     }).catch(res => {
       wx.showToast({
         title: '网络异常',
