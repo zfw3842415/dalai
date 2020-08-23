@@ -39,7 +39,6 @@ const $digest = (page) => {
   }
   
   if (Object.keys(ready2set).length) {
-    console.log(ready2set);
     page.setData(ready2set)
   }
 }

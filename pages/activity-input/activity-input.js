@@ -23,7 +23,9 @@ Page({
     endYear: 2050,
     focus: false,
     focusModel: true,
-    
+  },
+  other:{
+    images:[],
   },
   onLoad(options) {
     $init(this);
@@ -110,11 +112,20 @@ Page({
   chooseImage(e) {
     wx.chooseImage({
       count: 3,
-      sizeType: ['original', 'compressed'],
+      sizeType: ['compressed'],
       sourceType: ['album', 'camera'],
       success: res => {
-        const images = this.data.images.concat(res.tempFilePaths)
-        this.data.images = images.length <= 3 ? images : images.slice(0, 3)
+        console.log(res);
+        const images = res.tempFilePaths[0]
+        this.data.images.push(images)
+        wx.compressImage({
+          src: images,
+          quality:80,
+          success:res=>{
+            console.log(res);
+            this.other.images.push(res.tempFilePath)
+          }
+        })
         $digest(this)
       }
     })

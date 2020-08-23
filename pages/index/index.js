@@ -4,7 +4,7 @@ import { promisify } from '../../utils/promise.util'
 import { $init, $digest } from '../../utils/common.util'
 import { apiUrl, imagesUrl } from '../../utils/config'
 import { wxComUlit as wxUlit, formData as momentInfo } from '../../utils/comUit'
-import { checkVip, checkMemeber, relationShip, favorite,checkType } from '../../utils/Biz'
+import { checkVip, checkMemeber, relationShip, favorite, checkType } from '../../utils/Biz'
 const wxRequst = promisify(wx.request)
 const wxUploadFile = promisify(wx.uploadFile)
 const getStorge = promisify(wx.getStorage);
@@ -273,21 +273,35 @@ Page({
       })
     }
   },
-  getRelease:function(e){
-   let type = e.currentTarget.dataset.type;
+  getRelease: function (e) {
+    let type = e.currentTarget.dataset.type;
     checkType(type)
   },
-  modalcnt:function(){
-		wx.showModal({
-			title: '提示',
-			content: '感谢您对大来艺术博物馆的支持，为了您的资金安全，请联系大来博物馆官方热线400-88888888进行购买',
-			success: function(res) {
-				if (res.confirm) {
-				console.log('用户点击确定')
-				} else if (res.cancel) {
-				console.log('用户点击取消')
-				}
-			}
-		})
-	}
+  modalcnt: function () {
+    wx.showModal({
+      title: '提示',
+      content: '感谢您对大来艺术博物馆的支持，为了您的资金安全，请联系大来博物馆官方热线400-88888888进行购买',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
+  deleteReport: function (e) {
+    let id = e.currentTarget.dataset.id;
+    wxRequst({
+      data: { id: id },
+      url: `${apiUrl}/moments/dropinfo`
+    }).then(res => {
+      if (res.data.status == 1) {
+        wx.showToast({
+          title: '删除成功',
+        })
+        this.onShow();
+      }
+    })
+  }
 })

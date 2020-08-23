@@ -13,6 +13,9 @@ Page({
     images: [],
     imgArr: []
   },
+  other:{
+    images:[],
+  },
   previewImg: function (e) {
     console.log(e.currentTarget.dataset.index);
     var index = e.currentTarget.dataset.index;
@@ -52,13 +55,22 @@ Page({
     $digest(this);
     wx.chooseImage({
       count: 6,
-
-      sizeType: ['original', 'compressed'],
+      sizeType: ['compressed'],
       sourceType: ['album', 'camera'],
       success: res => {
-        const images = this.data.images.concat(res.tempFilePaths)
-        this.data.images = images.length <= 6 ? images : images.slice(0, 6)
-        this.data.imgArr = images
+        console.log(res);
+        const images = res.tempFilePaths[0]
+       // this.data.images.push(images);
+        this.data.imgArr.push(images);
+        wx.compressImage({
+          src: images,
+          quality:80,
+          success:res=>{
+            console.log(res);
+            this.other.images.push(res.tempFilePath)
+            console.log(this.data.images);
+          }
+        })
         $digest(this)
       }
     })
@@ -94,9 +106,6 @@ Page({
   removeImage(e) {
     const idx = e.target.dataset.idx
     this.data.images.splice(idx, 1)
-    this.data.images = [];
-    this.data.imgArr = [];
-    this.onLoad();
     $digest(this)
   },
   /**

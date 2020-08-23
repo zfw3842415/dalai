@@ -15,6 +15,9 @@ Page({
     focusModel: true,
     openId: ''
   },
+  other:{
+    images:[],
+  },
   onLoad(options) {
     $init(this);
     // 获取完整的年月日 时分秒，以及默认显示的数组
@@ -99,11 +102,20 @@ Page({
   chooseImage(e) {
     wx.chooseImage({
       count: 6,
-      sizeType: ['original', 'compressed'],
+      sizeType: ['compressed'],
       sourceType: ['album', 'camera'],
       success: res => {
-        const images = this.data.images.concat(res.tempFilePaths)
-        this.data.images = images.length <= 6 ? images : images.slice(0, 6)
+        console.log(res);
+        const images = res.tempFilePaths[0]
+        this.data.images.push(images)
+        wx.compressImage({
+          src: images,
+          quality:80,
+          success:res=>{
+            console.log(res);
+            this.other.images.push(res.tempFilePath)
+          }
+        })
         $digest(this)
       }
     })
@@ -112,6 +124,7 @@ Page({
   removeImage(e) {
     const idx = e.target.dataset.idx
     this.data.images.splice(idx, 1)
+    this.other.images.splice(idx, 1)
     $digest(this)
   },
 
@@ -127,7 +140,7 @@ Page({
   formSubmit: function (e) {
     console.log(e.detail.value.content)
     wxUlit.validation.length = 0;
-    wxUlit.regexTest(/^[\u4E00-\u9FA5]{1,120}$/g, e.detail.value.content, '内容不正确');
+    wxUlit.regexTest(/^\S{1,120}$/g, e.detail.value.meno, '介绍不正确');
     if (this.data.images.length == 0) {
       wx.showToast({
         title: '请选择图片',

@@ -53,24 +53,6 @@ Page({
           this.data.index2 = +res.data.type;
           this.data.userinfo = res.data;
           this.data.edit = 1;
-          let checkBox = res.data.ball;
-          console.log(checkBox);
-          let arr = checkBox.split(',');
-          this.data.ball = arr;
-          wxRequst({ data: null, method: 'GET', url: `${apiUrl}/balls` }).then(res => {
-            this.data.ballList = res.data;
-            console.log(res);
-            for (let key in arr) {
-              for (let keyOne in this.data.ballList) {
-                if (this.data.ballList[keyOne].ball == arr[key]) {
-                  this.data.ballList[keyOne]['checked'] = 'true';
-                }
-              }
-            }
-            $digest(this);
-          }).catch(res => {
-
-          });
           $digest(this);
         }).catch(res => {
 
