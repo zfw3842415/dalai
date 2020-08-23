@@ -6,7 +6,7 @@
     <view class="release">
       <view class="li">
         <text>作品标题：</text>
-        <input type="text" name="activityName" placeholder='请输入作品标题'></input>
+        <input type="text" name="activityName" placeholder='请输入作品标题（1-25个字符）'></input>
       </view>
       <view class="li">
         <text>作品时间：</text>
@@ -26,7 +26,7 @@
 
       <view class="li">
         <text>作品介绍：</text>
-        <textarea style="left:{{left}}" name="activityInfo" placeholder='请输入作品介绍'></textarea>
+        <textarea style="left:{{left}}" name="activityInfo" placeholder='请输入作品介绍（1-25个字符）'></textarea>
         <!-- <textarea wx:if="{{focusModel}}"></textarea> -->
       </view>
       <view class="li">
